@@ -8,6 +8,6 @@ The code is there to control the DC motor thanks to a potentiometer. It will als
 ## Renders of the controller
 
 ## Links to follow our adventure
-Instagram : https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D \\
-Linkedin : https://www.linkedin.com/company/e-comet-pierrard/ \\
+Instagram : https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D  
+Linkedin : https://www.linkedin.com/company/e-comet-pierrard/  
 Facebook : https://www.facebook.com/profile.php?id=100092158477900
