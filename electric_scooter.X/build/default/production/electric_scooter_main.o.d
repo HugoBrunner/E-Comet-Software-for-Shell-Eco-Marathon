@@ -1,0 +1,24 @@
+build/default/production/electric_scooter_main.o:  \
+electric_scooter_main.c  \
+ src/motor_control_noinline.h  \
+ src/../lib/motor_control/motor_control_declarations.h  \
+ src/../lib/motor_control/motor_control_types.h  \
+src/general.h  \
+ src/userparms.h  \
+src/../hal/clock.h  \
+src/control.h  \
+src/sccp3_tmr.h  \
+ src/fdweak.h  \
+src/userparms.h  \
+src/smcpos.h  \
+src/general.h  \
+src/readadc.h  \
+ src/meascurr.h  \
+src/sccp3_tmr.h  \
+hal/board_service.h  \
+hal/clock.h  \
+hal/pwm.h  \
+ hal/adc.h  \
+hal/port_config.h  \
+hal/../src/userparms.h  \
+ diagnostics/diagnostics.h 
