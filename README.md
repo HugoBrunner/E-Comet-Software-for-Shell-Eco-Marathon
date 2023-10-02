@@ -5,4 +5,9 @@ DC Motor Controller code for the Shell Eco-Marathon 2024 by the team E-Comet Pie
 
 The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write it on micro SD card. Finally, it will show important data on a LCD screen.
 
-## Images of the controller
+## Renders of the controller
+
+## Links to follow our adventure
+Instagram : https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D
+Linkedin : https://www.linkedin.com/company/e-comet-pierrard/
+Facebook : https://www.facebook.com/profile.php?id=100092158477900
