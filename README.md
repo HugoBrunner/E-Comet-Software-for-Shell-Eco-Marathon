@@ -9,6 +9,7 @@ DC Motor Controller software for the Shell Eco-Marathon 2024 by the team E-Comet
 The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write them on micro SD card. Finally, it will show selected data on a OLED screen.
 
 ### Python Script
+The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change.
 
 ## Controller PCB design
 
