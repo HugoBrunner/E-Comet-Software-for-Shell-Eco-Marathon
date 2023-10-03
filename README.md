@@ -33,7 +33,7 @@ Some renders of the PCB :
 Coming soon...
 
 ## Links to follow our adventure
-if you want to see how our project is going :
+If you want to see how our project is going :
 - [Instagram](https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D)  
 - [Linkedin](https://www.linkedin.com/company/e-comet-pierrard/)  
 - [Facebook](https://www.facebook.com/profile.php?id=100092158477900)
