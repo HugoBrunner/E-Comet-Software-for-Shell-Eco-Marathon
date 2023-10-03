@@ -17,6 +17,7 @@ Git repository for the [PCB design](https://cadlab.io/project/27305/master/files
 
 ### Renders of the controller
 
+Some renders of the PCB :
 ![PCB_cote](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/f9fb2a41-4999-4e1d-90c8-e5f32ad385d9)
 ![PCB_dessous](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/2173212e-2715-44cf-a522-24eec73d3cae)
 ![PCB_dessus](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/059b0242-5ef5-439a-95d5-404cf600eb5a)
