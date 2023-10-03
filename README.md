@@ -8,7 +8,8 @@ The E-Comet team is composed of nine electromechanical engineering students. The
 - Aerodynamic and shell design
 - Propulsion
 - Chassis
-- Steering
+- Steering  
+  
 We are designing a electric prototype to eventually participate to the Shell Eco-Marathon Europe and Africa 2024 at Nogaro in France.
 
 ## Software
