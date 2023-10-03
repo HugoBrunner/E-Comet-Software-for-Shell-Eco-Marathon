@@ -9,7 +9,7 @@ The code is there to control the DC motor thanks to a potentiometer. It will als
 
 ## Renders of the controller
 
-Git repository for the PCB design : https://cadlab.io/project/27305/master/files
+Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
 
 ## Links to follow our adventure
 [Instagram](https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D)  
