@@ -30,8 +30,10 @@ Some renders of the PCB :
 ![PCB_dessus](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/059b0242-5ef5-439a-95d5-404cf600eb5a)
 
 ## Renders of the prototype
+Coming soon...
 
 ## Links to follow our adventure
-[Instagram](https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D)  
-[Linkedin](https://www.linkedin.com/company/e-comet-pierrard/)  
-[Facebook](https://www.facebook.com/profile.php?id=100092158477900)
+if you want to see how our project is going :
+- [Instagram](https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D)  
+- [Linkedin](https://www.linkedin.com/company/e-comet-pierrard/)  
+- [Facebook](https://www.facebook.com/profile.php?id=100092158477900)
