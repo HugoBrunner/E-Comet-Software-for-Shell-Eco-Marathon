@@ -3,6 +3,13 @@ DC Motor Controller software for the Shell Eco-Marathon 2024 by the team E-Comet
 
 ![SolidWorks-Ecomet](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/fdcfead4-378e-41e6-80af-602ade4bbf07)
 
+The E-Comet team is composed of nine electromechanical engineering students. The team is composed of five subgroup :
+- electronics and software
+- aerodynamic and shell
+- propulsion
+- chassis
+- steering
+
 ## Software
 
 ### The goal of the code
