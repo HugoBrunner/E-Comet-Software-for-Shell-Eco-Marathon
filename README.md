@@ -16,7 +16,7 @@ The E-Comet team is composed of nine electromechanical engineering students. The
 The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write them on micro SD card. Finally, it will show selected data on a OLED screen.
 
 ### Python Script
-The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change.
+The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change. The script will give a LaTeX report with data and plots.
 
 ## Controller PCB design
 Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
