@@ -1,5 +1,5 @@
 # E-Comet-Software-for-Shell-Eco-Marathon
-DC Motor Controller software for the Shell Eco-Marathon 2024 by the team E-Comet Pierrard from the School of Engineering of Pierrard-Virton.
+DC Motor Controller software for the Shell Eco-Marathon 2024 by the team E-Comet Pierrard from the [School of Engineering of Pierrard-Virton](https://www.henallux.be/ecole-dingenieurs-departement-ingenieur-industriel-de-pierrard-virton).
 
 ![SolidWorks-Ecomet](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/fdcfead4-378e-41e6-80af-602ade4bbf07)
 
