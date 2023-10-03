@@ -3,12 +3,12 @@ DC Motor Controller software for the Shell Eco-Marathon 2024 by the team E-Comet
 
 ![SolidWorks-Ecomet](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/fdcfead4-378e-41e6-80af-602ade4bbf07)
 
-The E-Comet team is composed of nine electromechanical engineering students. The team is composed of five subgroup :
-- electronics and software
-- aerodynamic and shell
-- propulsion
-- chassis
-- steering
+The E-Comet team is composed of nine electromechanical engineering students. The team is composed of five subgroups :
+- Electronics and software
+- Aerodynamic and shell design
+- Propulsion
+- Chassis
+- Steering
 
 ## Software
 
@@ -19,11 +19,9 @@ The code is there to control the DC motor thanks to a potentiometer. It will als
 The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change.
 
 ## Controller PCB design
-
 Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
 
 ### Renders of the controller
-
 Some renders of the PCB :
 ![PCB_cote](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/f9fb2a41-4999-4e1d-90c8-e5f32ad385d9)
 ![PCB_dessous](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/2173212e-2715-44cf-a522-24eec73d3cae)
