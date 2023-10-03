@@ -1,5 +1,5 @@
 # E-Comet-Software-for-Shell-Eco-Marathon
-DC Motor Controller software for the Shell Eco-Marathon 2024 by the team E-Comet Pierrard from the [School of Engineering of Pierrard-Virton](https://www.henallux.be/ecole-dingenieurs-departement-ingenieur-industriel-de-pierrard-virton).
+DC Motor Controller software for the [Shell Eco-Marathon](https://www.shellecomarathon.com/) by the team E-Comet Pierrard from the [School of Engineering of Pierrard-Virton](https://www.henallux.be/ecole-dingenieurs-departement-ingenieur-industriel-de-pierrard-virton).
 
 ![SolidWorks-Ecomet](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/fdcfead4-378e-41e6-80af-602ade4bbf07)
 
@@ -9,6 +9,7 @@ The E-Comet team is composed of nine electromechanical engineering students. The
 - Propulsion
 - Chassis
 - Steering
+We are designing a electric prototype to eventually participate to the Shell Eco-Marathon Europe and Africa 2024 at Nogaro in France.
 
 ## Software
 
@@ -26,6 +27,8 @@ Some renders of the PCB :
 ![PCB_cote](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/f9fb2a41-4999-4e1d-90c8-e5f32ad385d9)
 ![PCB_dessous](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/2173212e-2715-44cf-a522-24eec73d3cae)
 ![PCB_dessus](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/assets/146762597/059b0242-5ef5-439a-95d5-404cf600eb5a)
+
+## Renders of the prototype
 
 ## Links to follow our adventure
 [Instagram](https://www.instagram.com/pierrardecomet/?igshid=MzRlODBiNWFlZA%3D%3D)  
