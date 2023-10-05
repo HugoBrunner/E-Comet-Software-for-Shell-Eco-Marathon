@@ -3,7 +3,7 @@
 /Software_Shell/DC_Controller_Shell/KICK_SCOOTER.X/build/
 /Software_Shell/DC_Controller_Shell/KICK_SCOOTER.X/debug/
 /Software_Shell/DC_Controller_Shell/KICK_SCOOTER.X/dist/
-/Software_Shell/DC_Controller_Shell/KICK_SCOOTER.X/nbproject/
+#/Software_Shell/DC_Controller_Shell/KICK_SCOOTER.X/nbproject/
 
 # pour rescanner le fichier .gitignore ==> taper les deux commandes ci-dessous à la racine du projet.
 #$ git rm -r --cached .
