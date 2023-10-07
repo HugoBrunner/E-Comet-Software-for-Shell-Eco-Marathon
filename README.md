@@ -27,7 +27,7 @@ The Python script is used to process the data from the board to calculate the en
 ## Controller PCB design
 Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
 ### Datasheet
--[dsPIC33CK32MP105](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/blob/master/Software_Shell/dsPIC33CK64MP105_Family_Data_Sheet_DS70005363E-1919058.pdf)
+- [dsPIC33CK32MP105](https://github.com/HugoBrunner/E-Comet-Software-for-Shell-Eco-Marathon/blob/master/Software_Shell/dsPIC33CK64MP105_Family_Data_Sheet_DS70005363E-1919058.pdf)
 
 ### Renders of the controller
 Some renders of the PCB :
