@@ -19,9 +19,15 @@ The code is there to control the DC motor thanks to a potentiometer. It will als
 
 ### Python Script
 The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change. The script will give a LaTeX report with data and plots.
+### Useful links
+- [Legacy PIC24 MCU & dsPIC DSC Peripheral Library](https://www.microchip.com/SWLibraryWeb/product.aspx?product=PIC24%20MCU%20dsPIC%20Peripheral%20Lib#)
+- [MPLAB® Code Configurator](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator)
+- [dspic33ck-power-pwm-complementary](https://github.com/microchip-pic-avr-examples/dspic33ck-power-pwm-complementary)
 
 ## Controller PCB design
 Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
+### Datasheet
+-[dsPIC33CK32MP105]
 
 ### Renders of the controller
 Some renders of the PCB :
