@@ -46,6 +46,8 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
+#include "mcc_generated_files/pwm.h"
+
 
 /*
                          Main application
