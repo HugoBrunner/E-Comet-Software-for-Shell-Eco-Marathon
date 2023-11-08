@@ -4,12 +4,22 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../Firmware/Srs/Include/FOC.h</itemPath>
-      <itemPath>../Firmware/Srs/Include/UserParms.h</itemPath>
-      <itemPath>../Firmware/Srs/Include/X2CScope.h</itemPath>
-      <itemPath>../Firmware/Srs/Include/X2CScopeComm.h</itemPath>
-      <itemPath>../Firmware/Srs/Include/init_dspic.h</itemPath>
-      <itemPath>../Firmware/Srs/Include/uart1.h</itemPath>
+      <logicalFolder name="mcc_generated_files"
+                     displayName="mcc_generated_files"
+                     projectFiles="true">
+        <itemPath>../mcc_generated_files/clock.h</itemPath>
+        <itemPath>../mcc_generated_files/interrupt_manager.h</itemPath>
+        <itemPath>../mcc_generated_files/mcc.h</itemPath>
+        <itemPath>../mcc_generated_files/pin_manager.h</itemPath>
+        <itemPath>../mcc_generated_files/pwm.h</itemPath>
+        <itemPath>../mcc_generated_files/pwm_module_features.h</itemPath>
+        <itemPath>../mcc_generated_files/reset.h</itemPath>
+        <itemPath>../mcc_generated_files/reset_types.h</itemPath>
+        <itemPath>../mcc_generated_files/system.h</itemPath>
+        <itemPath>../mcc_generated_files/system_types.h</itemPath>
+        <itemPath>../mcc_generated_files/traps.h</itemPath>
+        <itemPath>../mcc_generated_files/watchdog.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,22 +28,28 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../Firmware/Srs/Source/Main.c</itemPath>
-      <itemPath>../Firmware/Srs/Source/X2CScope.c</itemPath>
-      <itemPath>../Firmware/Srs/Source/X2CScopeComm.c</itemPath>
-      <itemPath>../Firmware/Srs/Source/init_dspic.c</itemPath>
-      <itemPath>../Firmware/Srs/Source/uart1.c</itemPath>
+      <logicalFolder name="mcc_generated_files"
+                     displayName="mcc_generated_files"
+                     projectFiles="true">
+        <itemPath>../mcc_generated_files/clock.c</itemPath>
+        <itemPath>../mcc_generated_files/interrupt_manager.c</itemPath>
+        <itemPath>../mcc_generated_files/mcc.c</itemPath>
+        <itemPath>../mcc_generated_files/pin_manager.c</itemPath>
+        <itemPath>../mcc_generated_files/pwm.c</itemPath>
+        <itemPath>../mcc_generated_files/reset.c</itemPath>
+        <itemPath>../mcc_generated_files/system.c</itemPath>
+        <itemPath>../mcc_generated_files/traps.c</itemPath>
+      </logicalFolder>
+      <itemPath>../main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>KICK_SCOOTER.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../Firmware/Srs/Include</Elem>
-    <Elem>../Firmware/Srs/Source</Elem>
+    <Elem>..</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -43,28 +59,26 @@
         <targetDevice>dsPIC33CK32MP105</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool></platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.0.62"/>
+        <pack name="dsPIC33CK-MP_DFP" vendor="Microchip" version="1.9.228"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../Firmware/Srs/Lib/libx2cscope-33ck-elf.a</linkerLibFileItem>
-            <linkerLibFileItem>../Firmware/Srs/Lib/Kick_scooter.X.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
         </archiverTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>true</parseOnProdLoad>
+          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
@@ -97,7 +111,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="expand-pragma-config" value="false"/>
-        <property key="extra-include-directories" value="..\Firmware\Srs\Source"/>
+        <property key="extra-include-directories" value=""/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -114,7 +128,7 @@
         <property key="oXC16gcc-sfr-warn" value="false"/>
         <property key="oXC16gcc-smar-io-lvl" value="1"/>
         <property key="oXC16gcc-smart-io-fmt" value=""/>
-        <property key="optimization-level" value="1"/>
+        <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
@@ -122,6 +136,25 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
       </C30>
+      <C30-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-section-info" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC16asm-extra-opts" value=""/>
+        <property key="oXC16asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="relax" value="false"/>
+        <property key="warning-level" value="emit-warnings"/>
+      </C30-AS>
       <C30-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>
@@ -149,7 +182,7 @@
         <property key="general-write-protect" value="no_write_protect"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="heap-size" value=""/>
-        <property key="input-libraries" value="&quot;q&quot;"/>
+        <property key="input-libraries" value=""/>
         <property key="linker-stack" value="true"/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
@@ -174,7 +207,7 @@
       </C30-LD>
       <C30Global>
         <property key="combine-sourcefiles" value="false"/>
-        <property key="common-include-directories" value="..\Firmware\Srs\Include"/>
+        <property key="common-include-directories" value=""/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
         <property key="generic-16-bit" value="false"/>
@@ -188,99 +221,6 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
       </C30Global>
-      <pk4hybrid>
-        <property key="ADC" value="true"/>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="CLC 1" value="true"/>
-        <property key="CLC 2" value="true"/>
-        <property key="CLC 3" value="true"/>
-        <property key="CLC 4" value="true"/>
-        <property key="CRC" value="true"/>
-        <property key="DACFRZ" value="true"/>
-        <property key="DMA" value="true"/>
-        <property key="FRZ" value="true"/>
-        <property key="Freeze All Other Peripherals" value="true"/>
-        <property key="I2C 1" value="true"/>
-        <property key="I2C 2" value="true"/>
-        <property key="MCCP/SCCP 1" value="true"/>
-        <property key="MCCP/SCCP 2" value="true"/>
-        <property key="MCCP/SCCP 3" value="true"/>
-        <property key="MCCP/SCCP 4" value="true"/>
-        <property key="MCCP/SCCP 5" value="true"/>
-        <property key="PG1" value="true"/>
-        <property key="PG2" value="true"/>
-        <property key="PG3" value="true"/>
-        <property key="PG4" value="true"/>
-        <property key="PTGFRZ" value="true"/>
-        <property key="QEI1" value="true"/>
-        <property key="QEI2" value="true"/>
-        <property key="REFO" value="true"/>
-        <property key="SENT1" value="true"/>
-        <property key="SENT2" value="true"/>
-        <property key="SPI 1" value="true"/>
-        <property key="SPI 2" value="true"/>
-        <property key="SPI 3" value="true"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="TIMER1" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
-        <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface" value=""/>
-        <property key="communication.interface.jtag" value="2wire"/>
-        <property key="communication.speed" value="${communication.speed.default}"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="freeze.timers" value="false"/>
-        <property key="memories.aux" value="false"/>
-        <property key="memories.bootflash" value="true"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.configurationmemory2" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.exclude.configurationmemory" value="true"/>
-        <property key="memories.flashdata" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-5eff"/>
-        <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoImageName" value="KICK_SCOOTER_ptg"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.ledbrightness" value="5"/>
-        <property key="programoptions.pgcconfig" value="pull down"/>
-        <property key="programoptions.pgcresistor.value" value="4.7"/>
-        <property key="programoptions.pgdconfig" value="pull down"/>
-        <property key="programoptions.pgdresistor.value" value="4.7"/>
-        <property key="programoptions.pgmentry.voltage" value="low"/>
-        <property key="programoptions.pgmspeed" value="Med"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges" value=""/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.program.otpconfig" value="false"/>
-        <property key="programoptions.programcalmem" value="false"/>
-        <property key="programoptions.programuserotp" value="false"/>
-        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="ptgProgramImage" value="true"/>
-        <property key="ptgSendImage" value="true"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value="3.25"/>
-      </pk4hybrid>
     </conf>
   </confs>
 </configurationDescriptor>
