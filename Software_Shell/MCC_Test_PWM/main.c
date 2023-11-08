@@ -56,7 +56,7 @@ int main(void)
     SYSTEM_Initialize();
     while (1)
     {
-        // Add your application code
+        // Ajout code de test du PWM
     }
     return 1; 
 }
