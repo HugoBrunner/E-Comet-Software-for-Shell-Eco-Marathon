@@ -45,10 +45,13 @@
 /**
   Section: Included Files
 */
+#define FCY 8000000UL // defines __delay_ms()
+#define DELAY 7
+#define CYCLE_DELAY 100
+
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/pwm.h"
-#include <stdio.h> // Defines printf("");
-
+#include <libpic30.h> //Defines __delay32();
 
 /*
                          Main application
@@ -61,16 +64,10 @@ int main(void)
     while (1)
     {
         // Add your application code
-        PWM_PeriodSet(PWM_GENERATOR_1,0xC7);
-        //PWM_PeriodSet(PWM_GENERATOR_1,0x15E);
-        PWM_GeneratorDisable(PWM_GENERATOR_1);
-        PWM_DutyCycleSet(PWM_GENERATOR_1,0x64); 
-        PWM_GeneratorEnable(PWM_GENERATOR_1);
-        
-        //PWM_PeriodSet(PWM_GENERATOR_3,0xC8);
-        //PWM_GeneratorDisable(PWM_GENERATOR_3);
-        //PWM_DutyCycleSet(PWM_GENERATOR_3,0x32);  
-        //PWM_GeneratorEnable(PWM_GENERATOR_3);
+        PWM_PeriodSet(PWM_GENERATOR_1,0x250);
+        PWM_PeriodSet(PWM_GENERATOR_3,0x104);
+        PWM_DutyCycleSet(PWM_GENERATOR_1, 0x96); 
+        PWM_DutyCycleSet(PWM_GENERATOR_3, 0x32); 
     }
     return 1; 
 }

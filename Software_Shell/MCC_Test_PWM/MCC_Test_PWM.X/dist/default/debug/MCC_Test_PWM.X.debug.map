@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.00 \
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.01 \
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.02 \
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.03 \
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.04 \
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.05 \
-  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005968.06 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.00 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.01 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.02 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.03 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.04 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.05 \
+  -TC:\\Users\\NapAp\\AppData\\Local\\Temp\\tmp00005110.06 \
   -p33CK32MP105 \
   -o \
   dist/default/debug/MCC_Test_PWM.X.debug.elf \
@@ -103,11 +103,11 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x1dc           0x2ca  (714)
-.text                        0x3dc               0x426           0x639  (1593)
-.dinit                       0x802                0x10            0x18  (24)
-.text                        0x812                 0x6             0x9  (9)
+.text                        0x3dc               0x402           0x603  (1539)
+.dinit                       0x7de                0x10            0x18  (24)
+.text                        0x7ee                 0x6             0x9  (9)
 
-                 Total "program" memory used (bytes):          0x924  (2340) 6%
+                 Total "program" memory used (bytes):          0x8ee  (2286) 6%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x2000]
@@ -163,20 +163,20 @@ External Symbols in Program Memory (by address):
                   0x000544                  _PWM_EventF_Tasks
                   0x000558                  _RESET_GetCause
                   0x000664                  _RESET_CauseClearAll
-                  0x0006e8                  _main
-                  0x000702                  _CLOCK_Initialize
-                  0x000756                  _CLOCK_AuxPllLockStatusGet
-                  0x00076e                  _PIN_MANAGER_Initialize
-                  0x0007d4                  _SYSTEM_Initialize
-                  0x000812                  _INTERRUPT_Initialize
+                  0x0006c0                  _main
+                  0x0006de                  _CLOCK_Initialize
+                  0x000732                  _CLOCK_AuxPllLockStatusGet
+                  0x00074a                  _PIN_MANAGER_Initialize
+                  0x0007b0                  _SYSTEM_Initialize
+                  0x0007ee                  _INTERRUPT_Initialize
                   0x005f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x000756                  _CLOCK_AuxPllLockStatusGet
-                  0x000702                  _CLOCK_Initialize
-                  0x000812                  _INTERRUPT_Initialize
-                  0x00076e                  _PIN_MANAGER_Initialize
+                  0x000732                  _CLOCK_AuxPllLockStatusGet
+                  0x0006de                  _CLOCK_Initialize
+                  0x0007ee                  _INTERRUPT_Initialize
+                  0x00074a                  _PIN_MANAGER_Initialize
                   0x0004c2                  _PWM_EventA_Tasks
                   0x0004dc                  _PWM_EventB_Tasks
                   0x0004f6                  _PWM_EventC_Tasks
@@ -188,7 +188,7 @@ External Symbols in Program Memory (by name):
                   0x0003dc                  _PWM_Initialize
                   0x000664                  _RESET_CauseClearAll
                   0x000558                  _RESET_GetCause
-                  0x0007d4                  _SYSTEM_Initialize
+                  0x0007b0                  _SYSTEM_Initialize
                   0x00033c                  __AddressError
                   0x0003d6                  __DefaultInterrupt
                   0x005f00                  __FSEC.sec
@@ -201,7 +201,7 @@ External Symbols in Program Memory (by name):
                   0x000248                  __data_init_extended
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0006e8                  _main
+                  0x0006c0                  _main
 
 Memory Configuration
 
@@ -390,19 +390,19 @@ __FALTREG
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x52ba
+.debug_info       0x000000       0x52d3
  *(.debug_info)
  .debug_info      0x000000        0x5aa build/default/debug/_ext/1769188794/clock.o
  .debug_info      0x0005aa        0x1a8 build/default/debug/_ext/1769188794/interrupt_manager.o
  .debug_info      0x000752        0x4c3 build/default/debug/_ext/1769188794/pin_manager.o
  .debug_info      0x000c15       0x198a build/default/debug/_ext/1769188794/pwm.o
  .debug_info      0x00259f        0x4dc build/default/debug/_ext/1769188794/reset.o
- .debug_info      0x002a7b       0x123b build/default/debug/_ext/1769188794/system.o
- .debug_info      0x003cb6        0x62b build/default/debug/_ext/1769188794/traps.o
- .debug_info      0x0042e1        0xfd9 build/default/debug/_ext/1472/main.o
+ .debug_info      0x002a7b       0x1283 build/default/debug/_ext/1769188794/system.o
+ .debug_info      0x003cfe        0x62b build/default/debug/_ext/1769188794/traps.o
+ .debug_info      0x004329        0xfaa build/default/debug/_ext/1472/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x69a
+.debug_abbrev     0x000000        0x667
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xda build/default/debug/_ext/1769188794/clock.o
  .debug_abbrev    0x0000da         0x34 build/default/debug/_ext/1769188794/interrupt_manager.o
@@ -412,9 +412,9 @@ __FALTREG
  .debug_abbrev    0x00022d         0xf6 build/default/debug/_ext/1769188794/reset.o
  .debug_abbrev    0x000323        0x13a build/default/debug/_ext/1769188794/system.o
  .debug_abbrev    0x00045d        0x10d build/default/debug/_ext/1769188794/traps.o
- .debug_abbrev    0x00056a        0x130 build/default/debug/_ext/1472/main.o
+ .debug_abbrev    0x00056a         0xfd build/default/debug/_ext/1472/main.o
 
-.debug_line       0x000000        0x8ec
+.debug_line       0x000000        0x8e3
  *(.debug_line)
  .debug_line      0x000000        0x10d build/default/debug/_ext/1769188794/clock.o
  .debug_line      0x00010d         0x58 build/default/debug/_ext/1769188794/interrupt_manager.o
@@ -424,9 +424,9 @@ __FALTREG
  .debug_line      0x000406        0x140 build/default/debug/_ext/1769188794/reset.o
  .debug_line      0x000546        0x13f build/default/debug/_ext/1769188794/system.o
  .debug_line      0x000685        0x136 build/default/debug/_ext/1769188794/traps.o
- .debug_line      0x0007bb        0x131 build/default/debug/_ext/1472/main.o
+ .debug_line      0x0007bb        0x128 build/default/debug/_ext/1472/main.o
 
-.debug_frame      0x000000        0x63e
+.debug_frame      0x000000        0x60a
  *(.debug_frame)
  .debug_frame     0x000000         0x48 build/default/debug/_ext/1769188794/clock.o
  .debug_frame     0x000048         0x2e build/default/debug/_ext/1769188794/interrupt_manager.o
@@ -435,16 +435,16 @@ __FALTREG
  .debug_frame     0x000272        0x118 build/default/debug/_ext/1769188794/reset.o
  .debug_frame     0x00038a         0x62 build/default/debug/_ext/1769188794/system.o
  .debug_frame     0x0003ec        0x1bc build/default/debug/_ext/1769188794/traps.o
- .debug_frame     0x0005a8         0x96 build/default/debug/_ext/1472/main.o
+ .debug_frame     0x0005a8         0x62 build/default/debug/_ext/1472/main.o
 
-.debug_str        0x000000        0x459
+.debug_str        0x000000        0x452
  *(.debug_str)
  .debug_str       0x000000         0x44 build/default/debug/_ext/1769188794/clock.o
  .debug_str       0x000044        0x1e1 build/default/debug/_ext/1769188794/pwm.o
  .debug_str       0x000225         0x17 build/default/debug/_ext/1769188794/reset.o
  .debug_str       0x00023c         0xff build/default/debug/_ext/1769188794/system.o
  .debug_str       0x00033b         0x24 build/default/debug/_ext/1769188794/traps.o
- .debug_str       0x00035f         0xfa build/default/debug/_ext/1472/main.o
+ .debug_str       0x00035f         0xf3 build/default/debug/_ext/1472/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -3121,7 +3121,7 @@ __c30_signature
  .ivt._SoftTrapError
                   0x000010          0x2 build/default/debug/_ext/1769188794/traps.o
 
-.text             0x0003dc        0x426
+.text             0x0003dc        0x402
  .text            0x0003dc        0x17c build/default/debug/_ext/1769188794/pwm.o
                   0x0003dc                  _PWM_Initialize
                   0x00048a                  _PWM_Generator1_CallBack
@@ -3144,21 +3144,21 @@ __c30_signature
                   0x000558                  _RESET_GetCause
                   0x000560                  _RESET_CauseHandler
                   0x000664                  _RESET_CauseClearAll
- .text            0x00066c         0x96 build/default/debug/_ext/1472/main.o
-                  0x0006e8                  _main
- .text            0x000702         0x6c build/default/debug/_ext/1769188794/clock.o
-                  0x000702                  _CLOCK_Initialize
-                  0x000756                  _CLOCK_AuxPllLockStatusGet
- .text            0x00076e         0x48 build/default/debug/_ext/1769188794/pin_manager.o
-                  0x00076e                  _PIN_MANAGER_Initialize
- .text            0x0007b6         0x32 build/default/debug/_ext/1769188794/system.o
-                  0x0007d4                  _SYSTEM_Initialize
- .text            0x0007e8         0x1a build/default/debug/_ext/1769188794/traps.o
-                  0x0007e8                  _TRAPS_halt_on_error
+ .text            0x00066c         0x72 build/default/debug/_ext/1472/main.o
+                  0x0006c0                  _main
+ .text            0x0006de         0x6c build/default/debug/_ext/1769188794/clock.o
+                  0x0006de                  _CLOCK_Initialize
+                  0x000732                  _CLOCK_AuxPllLockStatusGet
+ .text            0x00074a         0x48 build/default/debug/_ext/1769188794/pin_manager.o
+                  0x00074a                  _PIN_MANAGER_Initialize
+ .text            0x000792         0x32 build/default/debug/_ext/1769188794/system.o
+                  0x0007b0                  _SYSTEM_Initialize
+ .text            0x0007c4         0x1a build/default/debug/_ext/1769188794/traps.o
+                  0x0007c4                  _TRAPS_halt_on_error
 
-.dinit            0x000802         0x10
- .dinit           0x000802         0x10 data_init
+.dinit            0x0007de         0x10
+ .dinit           0x0007de         0x10 data_init
 
-.text             0x000812          0x6
- .text            0x000812          0x6 build/default/debug/_ext/1769188794/interrupt_manager.o
-                  0x000812                  _INTERRUPT_Initialize
+.text             0x0007ee          0x6
+ .text            0x0007ee          0x6 build/default/debug/_ext/1769188794/interrupt_manager.o
+                  0x0007ee                  _INTERRUPT_Initialize

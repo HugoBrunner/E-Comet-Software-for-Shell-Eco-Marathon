@@ -169,9 +169,9 @@ void PWM_Initialize (void)
     // PHASE 0; 
     PG3PHASE = 0x00;
     // DC 100; 
-    PG1DC = 0x96;
+    PG1DC = 0x64;
     // DC 100; 
-    PG3DC = 0x96;
+    PG3DC = 0x64;
     // DCA 0; 
     PG1DCA = 0x00;
     // DCA 0; 

@@ -93,11 +93,11 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x1dc           0x2ca  (714)
-.text                        0x3dc               0x3dc           0x5ca  (1482)
-.dinit                       0x7b8                0x10            0x18  (24)
-.text                        0x7c8                 0x6             0x9  (9)
+.text                        0x3dc               0x3c4           0x5a6  (1446)
+.dinit                       0x7a0                0x10            0x18  (24)
+.text                        0x7b0                 0x6             0x9  (9)
 
-                 Total "program" memory used (bytes):          0x8b5  (2229) 6%
+                 Total "program" memory used (bytes):          0x891  (2193) 6%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x2000]
@@ -148,18 +148,18 @@ External Symbols in Program Memory (by address):
                   0x000664                  _RESET_CauseClearAll
                   0x00066c                  _CLOCK_Initialize
                   0x0006c0                  _CLOCK_AuxPllLockStatusGet
-                  0x000716                  _main
-                  0x000726                  _PIN_MANAGER_Initialize
-                  0x00078c                  _SYSTEM_Initialize
-                  0x0007c8                  _INTERRUPT_Initialize
+                  0x0006d8                  _PIN_MANAGER_Initialize
+                  0x00074a                  _main
+                  0x000774                  _SYSTEM_Initialize
+                  0x0007b0                  _INTERRUPT_Initialize
                   0x005f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
                   0x0006c0                  _CLOCK_AuxPllLockStatusGet
                   0x00066c                  _CLOCK_Initialize
-                  0x0007c8                  _INTERRUPT_Initialize
-                  0x000726                  _PIN_MANAGER_Initialize
+                  0x0007b0                  _INTERRUPT_Initialize
+                  0x0006d8                  _PIN_MANAGER_Initialize
                   0x0004c2                  _PWM_EventA_Tasks
                   0x0004dc                  _PWM_EventB_Tasks
                   0x0004f6                  _PWM_EventC_Tasks
@@ -171,7 +171,7 @@ External Symbols in Program Memory (by name):
                   0x0003dc                  _PWM_Initialize
                   0x000664                  _RESET_CauseClearAll
                   0x000558                  _RESET_GetCause
-                  0x00078c                  _SYSTEM_Initialize
+                  0x000774                  _SYSTEM_Initialize
                   0x00033c                  __AddressError
                   0x0003d6                  __DefaultInterrupt
                   0x005f00                  __FSEC.sec
@@ -184,7 +184,7 @@ External Symbols in Program Memory (by name):
                   0x000248                  __data_init_extended
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000716                  _main
+                  0x00074a                  _main
 
 Memory Configuration
 
@@ -335,19 +335,19 @@ __FALTREG
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x5247
+.debug_info       0x000000       0x528d
  *(.debug_info)
  .debug_info      0x000000        0x5aa build/default/production/_ext/1769188794/clock.o
  .debug_info      0x0005aa        0x1a8 build/default/production/_ext/1769188794/interrupt_manager.o
  .debug_info      0x000752        0x4c3 build/default/production/_ext/1769188794/pin_manager.o
  .debug_info      0x000c15       0x198a build/default/production/_ext/1769188794/pwm.o
  .debug_info      0x00259f        0x4dc build/default/production/_ext/1769188794/reset.o
- .debug_info      0x002a7b       0x123b build/default/production/_ext/1769188794/system.o
- .debug_info      0x003cb6        0x62b build/default/production/_ext/1769188794/traps.o
- .debug_info      0x0042e1        0xf66 build/default/production/_ext/1472/main.o
+ .debug_info      0x002a7b       0x1283 build/default/production/_ext/1769188794/system.o
+ .debug_info      0x003cfe        0x62b build/default/production/_ext/1769188794/traps.o
+ .debug_info      0x004329        0xf64 build/default/production/_ext/1472/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x68b
+.debug_abbrev     0x000000        0x667
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xda build/default/production/_ext/1769188794/clock.o
  .debug_abbrev    0x0000da         0x34 build/default/production/_ext/1769188794/interrupt_manager.o
@@ -357,9 +357,9 @@ __FALTREG
  .debug_abbrev    0x00022d         0xf6 build/default/production/_ext/1769188794/reset.o
  .debug_abbrev    0x000323        0x13a build/default/production/_ext/1769188794/system.o
  .debug_abbrev    0x00045d        0x10d build/default/production/_ext/1769188794/traps.o
- .debug_abbrev    0x00056a        0x121 build/default/production/_ext/1472/main.o
+ .debug_abbrev    0x00056a         0xfd build/default/production/_ext/1472/main.o
 
-.debug_line       0x000000        0x8d6
+.debug_line       0x000000        0x8d0
  *(.debug_line)
  .debug_line      0x000000        0x10d build/default/production/_ext/1769188794/clock.o
  .debug_line      0x00010d         0x58 build/default/production/_ext/1769188794/interrupt_manager.o
@@ -369,9 +369,9 @@ __FALTREG
  .debug_line      0x000406        0x140 build/default/production/_ext/1769188794/reset.o
  .debug_line      0x000546        0x13f build/default/production/_ext/1769188794/system.o
  .debug_line      0x000685        0x136 build/default/production/_ext/1769188794/traps.o
- .debug_line      0x0007bb        0x11b build/default/production/_ext/1472/main.o
+ .debug_line      0x0007bb        0x115 build/default/production/_ext/1472/main.o
 
-.debug_frame      0x000000        0x60a
+.debug_frame      0x000000        0x5f0
  *(.debug_frame)
  .debug_frame     0x000000         0x48 build/default/production/_ext/1769188794/clock.o
  .debug_frame     0x000048         0x2e build/default/production/_ext/1769188794/interrupt_manager.o
@@ -380,7 +380,7 @@ __FALTREG
  .debug_frame     0x000272        0x118 build/default/production/_ext/1769188794/reset.o
  .debug_frame     0x00038a         0x62 build/default/production/_ext/1769188794/system.o
  .debug_frame     0x0003ec        0x1bc build/default/production/_ext/1769188794/traps.o
- .debug_frame     0x0005a8         0x62 build/default/production/_ext/1472/main.o
+ .debug_frame     0x0005a8         0x48 build/default/production/_ext/1472/main.o
 
 .debug_str        0x000000        0x452
  *(.debug_str)
@@ -3066,7 +3066,7 @@ __c30_signature
  .ivt._SoftTrapError
                   0x000010          0x2 build/default/production/_ext/1769188794/traps.o
 
-.text             0x0003dc        0x3dc
+.text             0x0003dc        0x3c4
  .text            0x0003dc        0x17c build/default/production/_ext/1769188794/pwm.o
                   0x0003dc                  _PWM_Initialize
                   0x00048a                  _PWM_Generator1_CallBack
@@ -3092,18 +3092,18 @@ __c30_signature
  .text            0x00066c         0x6c build/default/production/_ext/1769188794/clock.o
                   0x00066c                  _CLOCK_Initialize
                   0x0006c0                  _CLOCK_AuxPllLockStatusGet
- .text            0x0006d8         0x4e build/default/production/_ext/1472/main.o
-                  0x000716                  _main
- .text            0x000726         0x48 build/default/production/_ext/1769188794/pin_manager.o
-                  0x000726                  _PIN_MANAGER_Initialize
- .text            0x00076e         0x32 build/default/production/_ext/1769188794/system.o
-                  0x00078c                  _SYSTEM_Initialize
- .text            0x0007a0         0x18 build/default/production/_ext/1769188794/traps.o
-                  0x0007a0                  _TRAPS_halt_on_error
+ .text            0x0006d8         0x48 build/default/production/_ext/1769188794/pin_manager.o
+                  0x0006d8                  _PIN_MANAGER_Initialize
+ .text            0x000720         0x36 build/default/production/_ext/1472/main.o
+                  0x00074a                  _main
+ .text            0x000756         0x32 build/default/production/_ext/1769188794/system.o
+                  0x000774                  _SYSTEM_Initialize
+ .text            0x000788         0x18 build/default/production/_ext/1769188794/traps.o
+                  0x000788                  _TRAPS_halt_on_error
 
-.dinit            0x0007b8         0x10
- .dinit           0x0007b8         0x10 data_init
+.dinit            0x0007a0         0x10
+ .dinit           0x0007a0         0x10 data_init
 
-.text             0x0007c8          0x6
- .text            0x0007c8          0x6 build/default/production/_ext/1769188794/interrupt_manager.o
-                  0x0007c8                  _INTERRUPT_Initialize
+.text             0x0007b0          0x6
+ .text            0x0007b0          0x6 build/default/production/_ext/1769188794/interrupt_manager.o
+                  0x0007b0                  _INTERRUPT_Initialize

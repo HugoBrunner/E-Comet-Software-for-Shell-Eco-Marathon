@@ -357,10 +357,12 @@ inline static void PWM_PeriodSet(PWM_GENERATOR genNum,uint16_t period)
 {
     switch(genNum) { 
         case PWM_GENERATOR_1:
-                PG1PER = period;              
+                PG1PER = period; 
+                PG1STAT = 0b01000;
                 break;       
         case PWM_GENERATOR_3:
-                PG3PER = period;              
+                PG3PER = period; 
+                PG3STAT = 0b01000;
                 break;       
         default:break;    
     }   
@@ -392,10 +394,12 @@ inline static void PWM_DutyCycleSet(PWM_GENERATOR genNum,uint16_t dutyCycle)
 {
     switch(genNum) { 
         case PWM_GENERATOR_1:
-                PG1DC = dutyCycle;              
+                PG1DC = dutyCycle;    
+                PG1STAT = 0b01000;
                 break;       
         case PWM_GENERATOR_3:
-                PG3DC = dutyCycle;              
+                PG3DC = dutyCycle; 
+                PG3STAT = 0b01000;
                 break;       
         default:break;    
     }  
@@ -427,10 +431,12 @@ inline static void PWM_PhaseSet(PWM_GENERATOR genNum,uint16_t phase)
 {
     switch(genNum) { 
         case PWM_GENERATOR_1:
-                PG1PHASE = phase;              
+                PG1PHASE = phase;  
+                PG1STAT = 0b01000;
                 break;       
         case PWM_GENERATOR_3:
-                PG3PHASE = phase;              
+                PG3PHASE = phase;    
+                PG3STAT = 0b01000;
                 break;       
         default:break;    
     } 
@@ -742,10 +748,12 @@ inline static void PWM_DeadTimeLowSet(PWM_GENERATOR genNum,uint16_t deadtimeLow)
 {
     switch(genNum) { 
         case PWM_GENERATOR_1:
-                PG1DTL = deadtimeLow;              
+                PG1DTL = deadtimeLow;    
+                PG1STAT = 0b01000;
                 break;       
         case PWM_GENERATOR_3:
-                PG3DTL = deadtimeLow;              
+                PG3DTL = deadtimeLow; 
+                PG3STAT = 0b01000;
                 break;       
         default:break;    
     }
@@ -779,10 +787,12 @@ inline static void PWM_DeadTimeHighSet(PWM_GENERATOR genNum,uint16_t deadtimeHig
 {
     switch(genNum) { 
         case PWM_GENERATOR_1:
-                PG1DTH = deadtimeHigh;              
+                PG1DTH = deadtimeHigh; 
+                PG1STAT = 0b01000;       
                 break;       
         case PWM_GENERATOR_3:
-                PG3DTH = deadtimeHigh;              
+                PG3DTH = deadtimeHigh;   
+                PG3STAT = 0b01000;
                 break;       
         default:break;    
     }
@@ -817,11 +827,13 @@ inline static void PWM_DeadTimeSet(PWM_GENERATOR genNum,uint16_t deadtime)
     switch(genNum) { 
         case PWM_GENERATOR_1:
                 PG1DTL = deadtime;
-                PG1DTH = deadtime; 				
+                PG1DTH = deadtime; 
+                PG1STAT = 0b01000;				
                 break;       
         case PWM_GENERATOR_3:
                 PG3DTL = deadtime;
-                PG3DTH = deadtime; 				
+                PG3DTH = deadtime; 	
+                PG3STAT = 0b01000;
                 break;       
         default:break;    
     }
