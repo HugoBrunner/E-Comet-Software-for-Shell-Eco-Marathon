@@ -119,6 +119,7 @@ typedef enum
  
   @Example 
     <code>
+ 
     uint16_t masterPeriod,masterDutyCycle,masterPhase;
 
     masterPeriod = 0xFFFF;
