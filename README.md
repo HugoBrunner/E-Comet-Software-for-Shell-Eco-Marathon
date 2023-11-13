@@ -23,6 +23,7 @@ The Python script is used to process the data from the board to calculate the en
 - [Legacy PIC24 MCU & dsPIC DSC Peripheral Library](https://www.microchip.com/SWLibraryWeb/product.aspx?product=PIC24%20MCU%20dsPIC%20Peripheral%20Lib#)
 - [MPLAB® Code Configurator](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator)
 - [dspic33ck-power-pwm-complementary](https://github.com/microchip-pic-avr-examples/dspic33ck-power-pwm-complementary)
+- [dsPIC33C PWM/ADC Configuration](https://github.com/microchip-pic-avr-examples/dspic33ck-power-pwm-adc-trigger)
 
 ## Controller PCB design
 Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
