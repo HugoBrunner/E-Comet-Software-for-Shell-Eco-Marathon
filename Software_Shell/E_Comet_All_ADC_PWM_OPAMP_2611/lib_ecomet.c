@@ -31,7 +31,8 @@ double Rshunt = 0.002;
 float VBUS = 0;
 float courantBatt = 0;
 float courantMoteur = 0;
-float temp = 0;
+float tempMOS = 0;
+float tempPIC = 0;
 
 // Tension de référence
 float Ualim = 3.3;
@@ -67,6 +68,12 @@ void changeDC_Motor(){                                                          
     PG1STAT = 0b01000;
 }
 
+void changeDC_Motor_Error(int DC_Motor){
+    
+    PWM_DutyCycleSet(PWM_GENERATOR_1, DC_Motor);
+    PG1STAT = 0b01000;
+}
+
 void changeFreq_Motor(int freq_Motor){                                          // Change la fréquence du Buck de puissance de manière manuelle
     
     PWM_PeriodSet(PWM_GENERATOR_1, freq_Motor);
@@ -85,7 +92,7 @@ void changeFreq_Buzzer(int freq_Buzzer){                                        
     PG3STAT = 0b01000;
 }
 
-void measureShunt_1(){                                                          // Mesure le courant fourni par la batterie
+float measureShunt_1(){                                                          // Mesure le courant fourni par la batterie
     
     ADC1_CHANNEL channel = channel_AN7; 
             
@@ -107,15 +114,15 @@ void measureShunt_1(){                                                          
     conversion = ADC1_ConversionResultGet(channel); 
     ADC1_Disable();
     courantBatt = (float)(conversion/4095*Ualim/Rshunt);
+    return courantBatt;
 }
 
-void measureShunt_2(){                                                          // Mesure le courant absorbé par le moteur
+float measureShunt_2(){                                                          // Mesure le courant absorbé par le moteur
     
     ADC1_CHANNEL channel = channel_AN0; 
             
     int conversion = 0;
     int i=0;
-    float gain = 0;
     
     ADC1_Initialize();
 
@@ -132,9 +139,10 @@ void measureShunt_2(){                                                          
     conversion = ADC1_ConversionResultGet(channel); 
     ADC1_Disable();
     courantMoteur = (float)(conversion*0.0275 + 0.0432);
+    return courantMoteur;
 }
 
-void measureVBUS(){                                                             // Mesure la tension de la batterie (les 3 4S en série)
+float measureVBUS(){                                                             // Mesure la tension de la batterie (les 3 4S en série)
     
     ADC1_CHANNEL channel = channel_AN15; 
             
@@ -156,9 +164,10 @@ void measureVBUS(){                                                             
     conversion = ADC1_ConversionResultGet(channel); 
     ADC1_Disable();
     VBUS = (float)(conversion/4095.0*Ualim*16.0); 
+    return VBUS;
 }
 
-void measureTempMOSFET(){                                                       // Mesure la température de la surface du MOSFET Q2
+float measureTempMOSFET(){                                                       // Mesure la température de la surface du MOSFET Q2
     
     ADC1_CHANNEL channel = channel_AN12;  
                                          
@@ -185,11 +194,12 @@ void measureTempMOSFET(){                                                       
     ADC1_Disable();
     Uout = (float)(conversion/4095.0*Ualim);
     Rth = R2*Uout/(Ualim - Uout);
-    temp = 82.313*pow(Rth/10000.0,-0.235) - 56.0; // Utilisation de la fonction de régression 
+    tempMOS = 82.313*pow(Rth/10000.0,-0.235) - 56.0; // Utilisation de la fonction de régression 
                                                   // permettant de calculer la température
+    return tempMOS;
 }
 
-void measureTempPIC(){                                                          // Mesure la température du dsPIC33CK32MP105
+float measureTempPIC(){                                                          // Mesure la température du dsPIC33CK32MP105
     
     ADC1_CHANNEL channel = channel_AN19; 
             
@@ -210,13 +220,29 @@ void measureTempPIC(){                                                          
     while(!ADC1_IsConversionComplete(channel));
     conversion = ADC1_ConversionResultGet(channel); 
     ADC1_Disable();
-    courantMoteur = (float)(conversion/4095*Ualim);
+    tempPIC = (float)(conversion/4095*Ualim);
+    return tempPIC;
 }
 
 void init_Ecomet(){                                                             // Initialise les différents composants (PWM, ADC, ...)
     
     SYSTEM_Initialize(); 
     
+    TRISCbits.TRISC7 = 0;
+    LATCbits.LATC7 = 0;
+    
+    TRISCbits.TRISC12 = 0;
+    LATCbits.LATC12 = 0;
+    
+    TRISDbits.TRISD1 = 0;
+    LATDbits.LATD1 = 0;
+    
+    TRISDbits.TRISD8 = 0;
+    LATDbits.LATD8 = 0;
+    
+    TRISDbits.TRISD13 = 0;
+    LATDbits.LATD13 = 0;
+        
     int freq_Buzzer = 0x4E1; // f = 3,2 kHz
     int DC_Buzzer = 0x00; // DC = 0 %
     changeDC_Buzzer(DC_Buzzer);

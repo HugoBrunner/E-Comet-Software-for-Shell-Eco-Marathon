@@ -7,19 +7,23 @@ extern "C" {
 
 void changeDC_Motor();
 
+void changeDC_Motor_Error(int DC_Motor);
+
 void changeFreq_Motor(int freq_Motor);
 
 void changeDC_Buzzer(int DC_Buzzer);
 
 void changeFreq_Buzzer(int freq_Buzzer);
 
-void measureShunt_1();
+float measureShunt_1();
 
-void measureShunt_2();
+float measureShunt_2();
 
-void measureVBUS();
+float measureVBUS();
 
-void measureTempMOSFET();
+float measureTempMOSFET();
+
+float measureTempPIC();
 
 void init_Ecomet();
 
