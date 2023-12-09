@@ -25,13 +25,13 @@ int main(void){
              
     init_Ecomet();
     
-    float Imax = 0.5;            // Ampères
-    float Umax = 17;            // Volts
-    float Umin = 5;            // Volts
-    float TempMOSmax = 75;     // °C
-    float TempPICmax = 125;     // °C
+    float Imax = 10;              // Ampères
+    float Umin = 0;             // Volts
+    float Umax = 25;             // Volts
+    float TempMOSmax = 75;       // °C
+    float TempPICmax = 125;      // °C
     
-    // Valeurs initiales
+    // Valeurs initiales (lecture des ADCs)
     float VBUS = measureVBUS();
     float courantBatt = measureShunt_1();
     float courantMoteur = measureShunt_2();
@@ -39,18 +39,23 @@ int main(void){
     float tempPIC = 25;//measureTempPIC();
     
     // Indique que la carte a fini son initialisation
-    
-    changeDC_Buzzer(0x00); // DC = 0 %
+    changeDC_Buzzer(0x4E1); // DC = 0 %
     __delay_ms(250);
     changeDC_Buzzer(0x271); // DC = 50 %
     __delay_ms(250);
-    changeDC_Buzzer(0x00); // DC = 0 %
+    changeDC_Buzzer(0x4E1); // DC = 0 %
     __delay_ms(250);
     changeDC_Buzzer(0x271); // DC = 50 %
     __delay_ms(250);
-    changeDC_Buzzer(0x00); // DC = 0 %
+    changeDC_Buzzer(0x4E1); // DC = 0 %
+    __delay_ms(250);
      
     while (1){
+        
+        LATCbits.LATC7 = 0;
+        LATCbits.LATC12 = 0;
+        LATDbits.LATD1 = 0;
+        LATDbits.LATD8 = 0;
         
         while (courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
 
@@ -62,38 +67,38 @@ int main(void){
             courantMoteur = measureShunt_2();
         } 
         
-        // Allume la diode rouge FAULT
-        TRISCbits.TRISC7 = 0;
+        // Allume la LED rouge FAULT
         LATCbits.LATC7 = 1;
-        //courantMoteur = 100;
         
         // Coupe le moteur
         changeDC_Motor_Error(0);
         
-        // Allume la diode correspondante afin de prévenir le pilote du problème
-        if(courantBatt <= Imax){
+        // Allume la LED correspondante afin de prévenir le pilote du problème
+        if(courantBatt >= Imax){
             LATCbits.LATC12 = 1;
         }
-        else if(courantMoteur <= Imax){
+        else if(courantMoteur >= Imax){
             LATCbits.LATC12 = 1;
         }
-        else if(VBUS >= Umin || VBUS <= Umax){
+        else if(VBUS <= Umin || VBUS >= Umax){
             LATDbits.LATD1 = 1;
         }
-        else if(tempPIC <= TempPICmax){
+        else if(tempMOS >= TempMOSmax){
             LATDbits.LATD8 = 1;
         }
-        else if(tempMOS <= TempMOSmax){
-            LATDbits.LATD13 = 1;
-        }
-        
+                
         // Boucle Reset
-        int a = 0;
-        while(a == 0){          
+        int a = 1;
+        while(a == 1){          
             
             // Test le bouton lors de l'attente du Reset
-            a = TRISBbits.TRISB1; 
+            a = PORTDbits.RD13; 
         }
+        
+        VBUS = measureVBUS();
+        tempMOS = measureTempMOSFET();
+        courantBatt = measureShunt_1();
+        courantMoteur = measureShunt_2();
     }
     return 1; 
 }

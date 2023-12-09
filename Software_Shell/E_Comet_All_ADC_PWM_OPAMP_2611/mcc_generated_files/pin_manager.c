@@ -100,7 +100,7 @@ void PIN_MANAGER_Initialize (void)
     ANSELA = 0x001F;
     ANSELB = 0x009C;
     ANSELC = 0x00CF;
-    ANSELD = 0x2400;
+    ANSELD = 0x400;
     
     /****************************************************************************
      * Set the PPS

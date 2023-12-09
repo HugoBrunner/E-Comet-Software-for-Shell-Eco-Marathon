@@ -228,6 +228,7 @@ void init_Ecomet(){                                                             
     
     SYSTEM_Initialize(); 
     
+    // LEDs
     TRISCbits.TRISC7 = 0;
     LATCbits.LATC7 = 0;
     
@@ -240,9 +241,8 @@ void init_Ecomet(){                                                             
     TRISDbits.TRISD8 = 0;
     LATDbits.LATD8 = 0;
     
-    TRISDbits.TRISD13 = 0;
-    LATDbits.LATD13 = 0;
-        
+    TRISDbits.TRISD13 = 1;
+            
     int freq_Buzzer = 0x4E1; // f = 3,2 kHz
     int DC_Buzzer = 0x00; // DC = 0 %
     changeDC_Buzzer(DC_Buzzer);
