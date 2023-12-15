@@ -15,7 +15,7 @@ We are designing a electric prototype to eventually participate to the Shell Eco
 ## Software
 
 ### The goal of the code
-The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write them on micro SD card. Finally, it will show selected data on a OLED screen.
+The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write them on micro SD card. Finally, it will used the data to stop the driver if there are problems like to much current or to much heat at the MOSFET surface.
 
 ### Python Script
 The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change. The script will give a LaTeX report with data and plots.
