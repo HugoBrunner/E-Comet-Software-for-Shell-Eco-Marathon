@@ -148,11 +148,9 @@ void affichage()
 //main
 void loop()
 {
-  
  draw();
  vitesse(); 
  resetVmoy();
  vitesseMoy();
  affichage();
-   
 }
