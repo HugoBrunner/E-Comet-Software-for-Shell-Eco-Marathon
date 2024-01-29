@@ -20,11 +20,34 @@
 #include <math.h>
 
 // Programme
+void init_Timer( void ){
+    T1CONbits.TON = 1;    //Activate the timer module
+    T1CONbits.TCKPS = 1;  //Select input clock prescaler as 1:1
+    
+    T1CONbits.TGATE = 0;  //Disable Gate Time Accumulation Mode
+    T1CONbits.TCS = 0;    //Select internal clock as the timer clock source
+    T1CONbits.TSYNC = 0;  //External clock source is left unsynchronized
+    
+    PR1 = 50000; // 100 ms de delay
+}
+
+void Interrupt_Init( void ){
+    IEC0bits.T1IE = 1;
+    IPC0bits.T1IP = 6;
+}
+ 
+void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
+    LATCbits.LATC7 = 1; // Allume LED FAULT (test) --> boucle de régulation
+    __delay_ms(100);
+    LATCbits.LATC7 = 0;
+    IFS0bits.T1IF = 0;
+}
+
 int main(void){
              
     init_Ecomet();
     
-    float Imax = 10;              // Ampères
+    float Imax = 15;              // Ampères
     float Umin = 38;             // Volts
     float Umax = 52;             // Volts
     float TempMOSmax = 75;       // °C
@@ -45,6 +68,9 @@ int main(void){
     Buzzer_ON();
     __delay_ms(250);
     Buzzer_OFF();
+    
+    init_Timer();
+    Interrupt_Init();
      
     while (1){
         
