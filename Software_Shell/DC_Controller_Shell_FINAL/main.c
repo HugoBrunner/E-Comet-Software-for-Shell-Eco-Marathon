@@ -35,11 +35,57 @@ void Interrupt_Init( void ){
     IEC0bits.T1IE = 1;
     IPC0bits.T1IP = 6;
 }
- 
+
+// Paramètres ipmortants
+float Imax = 15;             // Ampères
+float Umin = 38;             // Volts
+float Umax = 52;             // Volts
+float TempMOSmax = 75;       // °C
+float TempPICmax = 125;      // °C
+
+float DeltaT = 0.001; // temps d'échantillonage régulation
+int consigne = 0;
+
+float K_p = 0.1; // coefficient proportionnel
+float K_i = 0.1; // coefficient intégral
+
+float erreur = 0;
+float u = 0; // commande du Buck
+float integral = 0;
+
 void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
-    LATCbits.LATC7 = 1; // Allume LED FAULT (test) --> boucle de régulation
-    __delay_ms(100);
-    LATCbits.LATC7 = 0;
+      
+    float VBUS = measureVBUS();
+    float courantBatt = measureShunt_1();
+    float courantMoteur = measureShunt_2();
+    float tempMOS = measureTempMOSFET();
+    float tempPIC = 25;
+    
+    if (courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
+        
+        consigne = consigneCourant();
+        
+        erreur = courantMoteur - consigne;
+        integral = integral + erreur*DeltaT;
+        u = K_p*erreur + K_i*integral;
+        
+        if (u/36*199 >= 199){
+            
+            u = 199;
+        } 
+        if(u/36*199 < 0){
+            
+            u = 0;
+        }
+        
+        PWM_DutyCycleSet(PWM_GENERATOR_1, u);
+    
+        PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1); // Dead time H : 250 ns 
+        PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1);
+        PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1); // Dead time L : 250 ns 
+        PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1);
+        PG1STAT = 0b01000;
+    }
     IFS0bits.T1IF = 0;
 }
 
@@ -47,7 +93,7 @@ int main(void){
              
     init_Ecomet();
     
-    float Imax = 15;              // Ampères
+    float Imax = 15;             // Ampères
     float Umin = 38;             // Volts
     float Umax = 52;             // Volts
     float TempMOSmax = 75;       // °C
@@ -81,8 +127,6 @@ int main(void){
         
         while (courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
 
-            changeDC_Motor();
-
             VBUS = measureVBUS();
             tempMOS = measureTempMOSFET();
             courantBatt = measureShunt_1();
@@ -91,6 +135,7 @@ int main(void){
         
         // Allume la LED rouge FAULT
         LATCbits.LATC7 = 1;
+        T1CONbits.TON = 0;
         
         // Coupe le moteur
         changeDC_Motor_Error(0);
@@ -121,6 +166,7 @@ int main(void){
         tempMOS = measureTempMOSFET();
         courantBatt = measureShunt_1();
         courantMoteur = measureShunt_2();
+        T1CONbits.TON = 1;
     }
     return 1; 
 }

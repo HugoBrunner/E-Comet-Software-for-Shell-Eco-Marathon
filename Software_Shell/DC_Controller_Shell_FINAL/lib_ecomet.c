@@ -33,6 +33,7 @@ float courantBatt = 0;
 float courantMoteur = 0;
 float tempMOS = 0;
 float tempPIC = 0;
+int consigne = 0;
 
 // Tension de référence
 float Ualim = 3.3;
@@ -71,6 +72,35 @@ void changeDC_Motor(){                                                          
     PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1); // Dead time L : 250 ns 
     PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1);
     PG1STAT = 0b01000;
+}
+
+int consigneCourant(){                                                          // Change le DC du Buck de puissance via la lecture du potentiomètre
+
+    ADC1_CHANNEL channel = channel_AN17; // lit la pin RC6 où est connecté le potentiomètre
+            
+    int conversion = 0;
+    int i=0;
+    float range = 5; // en Ampères
+    
+    ADC1_Initialize();
+
+    ADC1_Enable();
+    ADC1_ChannelSelect(channel);
+    ADC1_SoftwareTriggerEnable();
+    
+    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    {
+    }
+    
+    ADC1_SoftwareTriggerDisable();
+    //while(!ADC1_IsConversionComplete(channel));
+    conversion = ADC1_ConversionResultGet(channel) - 1050; // Corrige le décallage 
+                                                           // de tension du potentiomètre
+    ADC1_Disable(); 
+    
+    consigne = abs(round((float)(conversion/4095.0)*range*Ualim/1.725)); // vérifier conversion
+    
+    return consigne;
 }
 
 void changeDC_Motor_Error(int DC_Motor){

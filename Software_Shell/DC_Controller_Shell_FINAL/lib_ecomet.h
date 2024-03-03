@@ -7,6 +7,8 @@ extern "C" {
 
 void changeDC_Motor();
 
+int consigneCourant();
+
 void changeDC_Motor_Error(int DC_Motor);
 
 void changeFreq_Motor(int freq_Motor);
