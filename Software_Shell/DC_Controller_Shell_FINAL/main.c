@@ -6,7 +6,7 @@
  */
 
 // Définition de variables globales
-#define FCY 8000000UL // défini la fonction : __delay_ms()
+#define FCY 8000000UL        // défini la fonction : __delay_ms()
 #define CYCLE_DELAY 10
 
 // Nos librairies
@@ -16,19 +16,19 @@
 #include "lib_ecomet.h"
 
 // Autres librairies
-#include <libpic30.h> //Defines __delay32();
+#include <libpic30.h>       //Defines __delay32();
 #include <math.h>
 
 // Programme
 void init_Timer( void ){
-    T1CONbits.TON = 1;    //Activate the timer module
-    T1CONbits.TCKPS = 1;  //Select input clock prescaler as 1:1
+    T1CONbits.TON = 1;      //Activate the timer module
+    T1CONbits.TCKPS = 1;    //Select input clock prescaler as 1:8
     
-    T1CONbits.TGATE = 0;  //Disable Gate Time Accumulation Mode
-    T1CONbits.TCS = 0;    //Select internal clock as the timer clock source
-    T1CONbits.TSYNC = 0;  //External clock source is left unsynchronized
+    T1CONbits.TGATE = 0;    //Disable Gate Time Accumulation Mode
+    T1CONbits.TCS = 0;      //Select internal clock as the timer clock source
+    T1CONbits.TSYNC = 0;    //External clock source is left unsynchronized
     
-    PR1 = 50000; // 100 ms de delay
+    PR1 = 500;              // 100 ms de delay
 }
 
 void Interrupt_Init( void ){
@@ -37,17 +37,17 @@ void Interrupt_Init( void ){
 }
 
 // Paramètres ipmortants
-float Imax = 15;             // Ampères
+float Imax = 12;             // Ampères
 float Umin = 38;             // Volts
 float Umax = 52;             // Volts
 float TempMOSmax = 75;       // °C
 float TempPICmax = 125;      // °C
 
-float DeltaT = 0.001; // temps d'échantillonage régulation
+float DeltaT = 0.001;       // temps d'échantillonage régulation
 int consigne = 0;
 
-float K_p = 0.1; // coefficient proportionnel
-float K_i = 0.1; // coefficient intégral
+float K_p = 0.004497;       // coefficient proportionnel
+float K_i = 10.39;          // coefficient intégral
 
 float erreur = 0;
 float u = 0; // commande du Buck
@@ -61,22 +61,40 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
     float tempMOS = measureTempMOSFET();
     float tempPIC = 25;
     
+    int sat = 1;
+    
     if (courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
         
         consigne = consigneCourant();
         
-        erreur = courantMoteur - consigne;
-        integral = integral + erreur*DeltaT;
+        erreur = consigne - courantMoteur;
+        
+        if (consigne != 0) {
+   
+            integral = integral + sat*erreur*DeltaT;
+            sat = 1;
+        }else{
+            
+            integral = 0;
+        }
+        
         u = K_p*erreur + K_i*integral;
         
         if (u/36*199 >= 199){
             
             u = 199;
+            //integral = 0;
+            sat = 0;
         } 
+        
         if(u/36*199 < 0){
             
             u = 0;
+            //integral = 0;
+            sat = 0;
         }
+        
+        u = (int)(u*199/36);
         
         PWM_DutyCycleSet(PWM_GENERATOR_1, u);
     
@@ -85,8 +103,18 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
         PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1); // Dead time L : 250 ns 
         PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1);
         PG1STAT = 0b01000;
+    } else{
+        
+        PWM_DutyCycleSet(PWM_GENERATOR_1, 0);
+    
+        PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1); // Dead time H : 250 ns 
+        PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1);
+        PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1); // Dead time L : 250 ns 
+        PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1);
+        PG1STAT = 0b01000;
     }
     IFS0bits.T1IF = 0;
+    
 }
 
 int main(void){
@@ -136,6 +164,8 @@ int main(void){
         // Allume la LED rouge FAULT
         LATCbits.LATC7 = 1;
         T1CONbits.TON = 0;
+        integral = 0;
+        erreur = 0;
         
         // Coupe le moteur
         changeDC_Motor_Error(0);

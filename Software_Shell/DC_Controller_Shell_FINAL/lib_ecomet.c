@@ -33,7 +33,6 @@ float courantBatt = 0;
 float courantMoteur = 0;
 float tempMOS = 0;
 float tempPIC = 0;
-int consigne = 0;
 
 // Tension de référence
 float Ualim = 3.3;
@@ -80,7 +79,8 @@ int consigneCourant(){                                                          
             
     int conversion = 0;
     int i=0;
-    float range = 5; // en Ampères
+    float range = 20; // en Ampères
+    float courant_gachette = 0;
     
     ADC1_Initialize();
 
@@ -98,9 +98,9 @@ int consigneCourant(){                                                          
                                                            // de tension du potentiomètre
     ADC1_Disable(); 
     
-    consigne = abs(round((float)(conversion/4095.0)*range*Ualim/1.725)); // vérifier conversion
+    courant_gachette = abs(round((float)(conversion/4095.0)*range)); // vérifier conversion
     
-    return consigne;
+    return courant_gachette;
 }
 
 void changeDC_Motor_Error(int DC_Motor){
