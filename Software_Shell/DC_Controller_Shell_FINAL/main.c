@@ -43,14 +43,14 @@ float Umax = 52;             // Volts
 float TempMOSmax = 75;       // °C
 float TempPICmax = 125;      // °C
 
-float DeltaT = 0.001;       // temps d'échantillonage régulation
+float DeltaT = 0.001;        // temps d'échantillonage régulation
 int consigne = 0;
 
-float K_p = 0.004497;       // coefficient proportionnel
-float K_i = 10.39;          // coefficient intégral
+float K_p = 0.004497;        // coefficient proportionnel
+float K_i = 10.39;           // coefficient intégral
 
 float erreur = 0;
-float u = 0; // commande du Buck
+float u = 0;                 // commande du Buck
 float integral = 0;
 
 void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
@@ -80,21 +80,21 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
         
         u = K_p*erreur + K_i*integral;
         
-        if (u/36*199 >= 199){
+        if (u/36*150 >= 150){
             
-            u = 199;
+            u = 150;
             //integral = 0;
             sat = 0;
         } 
         
-        if(u/36*199 < 0){
+        if(u/36*150 < 0){
             
             u = 0;
             //integral = 0;
             sat = 0;
         }
         
-        u = (int)(u*199/36);
+        u = (int)(u*150/36);
         
         PWM_DutyCycleSet(PWM_GENERATOR_1, u);
     
