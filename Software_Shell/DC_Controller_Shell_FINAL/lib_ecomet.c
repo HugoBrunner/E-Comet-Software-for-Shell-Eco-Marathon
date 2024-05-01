@@ -196,7 +196,7 @@ float measureVBUS(){                                                            
     while(!ADC1_IsConversionComplete(channel));
     conversion = ADC1_ConversionResultGet(channel); 
     ADC1_Disable();
-    VBUS = (float)(conversion/4095.0*Ualim*16.0); 
+    VBUS = (float)(conversion/4095.0*Ualim*16.0 - 0.2); 
     return VBUS;
 }
 

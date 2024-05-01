@@ -3,6 +3,8 @@
  * 
  * Ecole d'Ingénieurs de Pierrard-Virton
  * 
+ *  01 mai 2024
+ * 
  */
 
 // Définition de variables globales
@@ -28,7 +30,7 @@ void init_Timer( void ){
     T1CONbits.TCS = 0;      //Select internal clock as the timer clock source
     T1CONbits.TSYNC = 0;    //External clock source is left unsynchronized
     
-    PR1 = 500;              // 100 ms de delay
+    PR1 = 5000;              // 10 ms de delay
 }
 
 void Interrupt_Init( void ){
@@ -38,41 +40,45 @@ void Interrupt_Init( void ){
 
 // Paramètres ipmortants
 float Imax = 12;             // Ampères
-float Umin = 38;             // Volts
+float Umin = 42;             // Volts
 float Umax = 52;             // Volts
 float TempMOSmax = 75;       // °C
 float TempPICmax = 125;      // °C
 
-float DeltaT = 0.001;        // temps d'échantillonage régulation
+float DeltaT = 0.01;        // temps d'échantillonage régulation
 int consigne = 0;
+int secu = 0;
+int test = 0;
 
-float K_p = 0.004497;        // coefficient proportionnel
-float K_i = 10.39;           // coefficient intégral
-
+float K_p = 5;               // coefficient proportionnel : 0.004497
+float K_i = 10;              // coefficient intégral : 10.39
+ 
 float erreur = 0;
 float u = 0;                 // commande du Buck
 float integral = 0;
 
 void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
       
-    float VBUS = measureVBUS();
-    float courantBatt = measureShunt_1();
-    float courantMoteur = measureShunt_2();
-    float tempMOS = measureTempMOSFET();
-    float tempPIC = 25;
+    float VBUS1 = measureVBUS();
+    float courantBatt1 = measureShunt_1();
+    float courantMoteur1 = measureShunt_2();
+    float tempMOS1 = measureTempMOSFET();
+    float tempPIC1 = 25;
     
-    int sat = 1;
+    int sat = 0;
     
-    if (courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
+    if (secu == 0 && courantBatt1 <= Imax && courantMoteur1 <= Imax && VBUS1 >= Umin && VBUS1 <= Umax && tempPIC1 <= TempPICmax && tempMOS1 <= TempMOSmax){
         
-        consigne = consigneCourant();
-        
-        erreur = consigne - courantMoteur;
+        consigne = consigneCourant(); // réduire le nombre 
+        courantMoteur1 = measureShunt_2();
+        VBUS1 = measureVBUS();
+       
+        sat = (int)(36/VBUS1*199 - 1);
+        erreur = consigne - courantMoteur1;
         
         if (consigne != 0) {
    
-            integral = integral + sat*erreur*DeltaT;
-            sat = 1;
+            integral = integral + erreur*DeltaT;
         }else{
             
             integral = 0;
@@ -80,21 +86,19 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
         
         u = K_p*erreur + K_i*integral;
         
-        if (u/36*150 >= 150){
+        if (u/36*sat >= sat){
             
-            u = 150;
-            //integral = 0;
-            sat = 0;
+            u = 36;  
+            integral = 36;
         } 
         
-        if(u/36*150 < 0){
+        if(u/36*sat < 0){
             
             u = 0;
-            //integral = 0;
-            sat = 0;
+            integral = 0;
         }
         
-        u = (int)(u*150/36);
+        u = (int)(u*sat/36);
         
         PWM_DutyCycleSet(PWM_GENERATOR_1, u);
     
@@ -112,17 +116,18 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
         PWM_DeadTimeLowSet(PWM_GENERATOR_1, 1); // Dead time L : 250 ns 
         PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1);
         PG1STAT = 0b01000;
+        secu = 1;
+        T1CON = 0;
     }
     IFS0bits.T1IF = 0;
-    
 }
 
 int main(void){
              
     init_Ecomet();
     
-    float Imax = 15;             // Ampères
-    float Umin = 38;             // Volts
+    float Imax = 12;             // Ampères
+    float Umin = 42;             // Volts
     float Umax = 52;             // Volts
     float TempMOSmax = 75;       // °C
     float TempPICmax = 125;      // °C
@@ -153,7 +158,11 @@ int main(void){
         LATDbits.LATD1 = 0;
         LATDbits.LATD8 = 0;
         
-        while (courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
+        test = test + 1;
+        
+        while (secu == 0 && courantBatt <= Imax && courantMoteur <= Imax && VBUS >= Umin && VBUS <= Umax && tempPIC <= TempPICmax && tempMOS <= TempMOSmax){
+            
+            test = test + 1;
 
             VBUS = measureVBUS();
             tempMOS = measureTempMOSFET();
