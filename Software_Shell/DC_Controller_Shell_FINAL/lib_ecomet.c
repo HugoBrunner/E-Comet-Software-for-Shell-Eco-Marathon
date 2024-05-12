@@ -46,13 +46,11 @@ void changeDC_Motor(){                                                          
     int conversion = 0;
     int i=0;
     
-    ADC1_Initialize();
-
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
     
-    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    for(i=0;i <500;i++) // laisse le temps au PIC de faire la mesure
     {
     }
     
@@ -80,10 +78,10 @@ int consigneCourant(){                                                          
     int conversion = 0;
     int i=0;
     float range = 20; // en Ampères
-    float courant_gachette = 0;
+    int courant_gachette = 0;
     
     ADC1_Initialize();
-
+    
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
@@ -98,7 +96,7 @@ int consigneCourant(){                                                          
                                                            // de tension du potentiomètre
     ADC1_Disable(); 
     
-    courant_gachette = abs(round((float)(conversion/4095.0)*range)); // vérifier conversion
+    courant_gachette = (int)(abs((float)(conversion/4095.0)*range)); 
     
     return courant_gachette;
 }
@@ -132,13 +130,11 @@ float measureShunt_1(){                                                         
     int conversion = 0;
     int i=0;
     
-    ADC1_Initialize();
-
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
     
-    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    for(i=0;i <500;i++) // laisse le temps au PIC de faire la mesure
     {
     }
     
@@ -157,13 +153,11 @@ float measureShunt_2(){                                                         
     int conversion = 0;
     int i=0;
     
-    ADC1_Initialize();
-
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
     
-    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    for(i=0;i <500;i++) // laisse le temps au PIC de faire la mesure
     {
     }
     
@@ -182,13 +176,11 @@ float measureVBUS(){                                                            
     int conversion = 0;
     int i=0;
     
-    ADC1_Initialize();
-
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
     
-    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    for(i=0;i <500;i++) // laisse le temps au PIC de faire la mesure
     {
     }
     
@@ -211,13 +203,11 @@ float measureTempMOSFET(){                                                      
     
     int R2 = 3300; // Résitance du pont diviseur de la mesure de température
     
-    ADC1_Initialize();
-
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
     
-    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    for(i=0;i <500;i++) // laisse le temps au PIC de faire la mesure
     {
     }
     
@@ -239,13 +229,11 @@ float measureTempPIC(){                                                         
     int conversion = 0;
     int i=0;
     
-    ADC1_Initialize();
-
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
     
-    for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
+    for(i=0;i <500;i++) // laisse le temps au PIC de faire la mesure
     {
     }
     
