@@ -31,6 +31,7 @@ double Rshunt = 0.002;
 float VBUS = 0;
 float courantBatt = 0;
 float courantMoteur = 0;
+float courant_gachette = 0;
 float tempMOS = 0;
 float tempPIC = 0;
 
@@ -71,14 +72,14 @@ void changeDC_Motor(){                                                          
     PG1STAT = 0b01000;
 }
 
-int consigneCourant(){                                                          // Change le DC du Buck de puissance via la lecture du potentiomètre
+float consigneCourant(){                                                          // Change le DC du Buck de puissance via la lecture du potentiomètre
 
     ADC1_CHANNEL channel = channel_AN17; // lit la pin RC6 où est connecté le potentiomètre
             
     int conversion = 0;
     int i=0;
-    float range = 20; // en Ampères
-    int courant_gachette = 0;
+    float range = 20.0; // en Ampères
+    float courant_gachette = 0.0;
     
     ADC1_Initialize();
     
@@ -96,7 +97,7 @@ int consigneCourant(){                                                          
                                                            // de tension du potentiomètre
     ADC1_Disable(); 
     
-    courant_gachette = (int)(abs((float)(conversion/4095.0)*range)); 
+    courant_gachette = (float)conversion/4095*range; 
     
     return courant_gachette;
 }

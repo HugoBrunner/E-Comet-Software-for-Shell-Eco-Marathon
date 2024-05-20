@@ -46,7 +46,7 @@ float TempPICmax = 125;      // °C
 
 float DeltaT = 0.1;         // temps d'échantillonage régulation
 int test = 0;
-int consigne = 0;
+float consigne = 0;
 
 float K_p = 5;               // coefficient proportionnel : 0.004497
 float K_i = 1;              // coefficient intégral : 10.39

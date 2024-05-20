@@ -152,13 +152,13 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x163c          0x215a  (8538)
-.text                       0x183c               0xc98          0x12e4  (4836)
-.dinit                      0x24d4                0x6c            0xa2  (162)
-.text                       0x2540                0x7c            0xba  (186)
-.init.delay32               0x25bc                0x1c            0x2a  (42)
-.text                       0x25d8                0x48            0x6c  (108)
+.text                       0x183c               0xc96          0x12e1  (4833)
+.dinit                      0x24d2                0x6c            0xa2  (162)
+.text                       0x253e                0x7c            0xba  (186)
+.init.delay32               0x25ba                0x1c            0x2a  (42)
+.text                       0x25d6                0x48            0x6c  (108)
 
-                 Total "program" memory used (bytes):         0x3630  (13872) 38%
+                 Total "program" memory used (bytes):         0x362d  (13869) 38%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x2000]
@@ -311,25 +311,25 @@ External Symbols in Program Memory (by address):
                   0x001fc0                  _ADC1_Setchannel_AN20InterruptHandler
                   0x001fd4                  _ADC1_Setchannel_AN0InterruptHandler
                   0x00204c                  _init_Timer
-                  0x002068                  _Interrupt_Init
-                  0x00207c                  _main
-                  0x002232                  _PWM_Initialize
-                  0x0022a6                  _PWM_Generator1_Tasks
-                  0x0022be                  _PWM_EventA_Tasks
-                  0x0022d8                  _PWM_EventB_Tasks
-                  0x0022f2                  _PWM_EventC_Tasks
-                  0x00230c                  _PWM_EventD_Tasks
-                  0x002326                  _PWM_EventE_Tasks
-                  0x002340                  _PWM_EventF_Tasks
-                  0x002354                  _RESET_GetCause
-                  0x002460                  _RESET_CauseClearAll
-                  0x002468                  _CLOCK_Initialize
-                  0x0024bc                  _CLOCK_AuxPllLockStatusGet
-                  0x002540                  _PIN_MANAGER_Initialize
-                  0x0025a4                  _SYSTEM_Initialize
-                  0x0025bc                  ___delay32
-                  0x0025d8                  _INTERRUPT_Initialize
-                  0x002612                  _OPA_Initialize
+                  0x002066                  _Interrupt_Init
+                  0x00207a                  _main
+                  0x002230                  _PWM_Initialize
+                  0x0022a4                  _PWM_Generator1_Tasks
+                  0x0022bc                  _PWM_EventA_Tasks
+                  0x0022d6                  _PWM_EventB_Tasks
+                  0x0022f0                  _PWM_EventC_Tasks
+                  0x00230a                  _PWM_EventD_Tasks
+                  0x002324                  _PWM_EventE_Tasks
+                  0x00233e                  _PWM_EventF_Tasks
+                  0x002352                  _RESET_GetCause
+                  0x00245e                  _RESET_CauseClearAll
+                  0x002466                  _CLOCK_Initialize
+                  0x0024ba                  _CLOCK_AuxPllLockStatusGet
+                  0x00253e                  _PIN_MANAGER_Initialize
+                  0x0025a2                  _SYSTEM_Initialize
+                  0x0025ba                  ___delay32
+                  0x0025d6                  _INTERRUPT_Initialize
+                  0x002610                  _OPA_Initialize
                   0x005f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
@@ -348,23 +348,23 @@ External Symbols in Program Memory (by name):
                   0x001e92                  _ADC1_SharedCorePowerEnable
                   0x001af2                  _Buzzer_OFF
                   0x001afa                  _Buzzer_ON
-                  0x0024bc                  _CLOCK_AuxPllLockStatusGet
-                  0x002468                  _CLOCK_Initialize
-                  0x0025d8                  _INTERRUPT_Initialize
-                  0x002068                  _Interrupt_Init
-                  0x002612                  _OPA_Initialize
-                  0x002540                  _PIN_MANAGER_Initialize
-                  0x0022be                  _PWM_EventA_Tasks
-                  0x0022d8                  _PWM_EventB_Tasks
-                  0x0022f2                  _PWM_EventC_Tasks
-                  0x00230c                  _PWM_EventD_Tasks
-                  0x002326                  _PWM_EventE_Tasks
-                  0x002340                  _PWM_EventF_Tasks
-                  0x0022a6                  _PWM_Generator1_Tasks
-                  0x002232                  _PWM_Initialize
-                  0x002460                  _RESET_CauseClearAll
-                  0x002354                  _RESET_GetCause
-                  0x0025a4                  _SYSTEM_Initialize
+                  0x0024ba                  _CLOCK_AuxPllLockStatusGet
+                  0x002466                  _CLOCK_Initialize
+                  0x0025d6                  _INTERRUPT_Initialize
+                  0x002066                  _Interrupt_Init
+                  0x002610                  _OPA_Initialize
+                  0x00253e                  _PIN_MANAGER_Initialize
+                  0x0022bc                  _PWM_EventA_Tasks
+                  0x0022d6                  _PWM_EventB_Tasks
+                  0x0022f0                  _PWM_EventC_Tasks
+                  0x00230a                  _PWM_EventD_Tasks
+                  0x002324                  _PWM_EventE_Tasks
+                  0x00233e                  _PWM_EventF_Tasks
+                  0x0022a4                  _PWM_Generator1_Tasks
+                  0x002230                  _PWM_Initialize
+                  0x00245e                  _RESET_CauseClearAll
+                  0x002352                  _RESET_GetCause
+                  0x0025a2                  _SYSTEM_Initialize
                   0x0003d4                  __AddressError
                   0x0005f8                  __DefaultInterrupt
                   0x005f00                  __FSEC.sec
@@ -376,7 +376,7 @@ External Symbols in Program Memory (by name):
                   0x00046e                  __T1Interrupt
                   0x0006c0                  ___addsf3
                   0x0006c0                  ___addsf3x
-                  0x0025bc                  ___delay32
+                  0x0025ba                  ___delay32
                   0x00088a                  ___divsf3
                   0x00088a                  ___divsf3x
                   0x0005fe                  ___eqsf2
@@ -415,7 +415,7 @@ External Symbols in Program Memory (by name):
                   0x001832                  _fabsf
                   0x001d52                  _init_Ecomet
                   0x00204c                  _init_Timer
-                  0x00207c                  _main
+                  0x00207a                  _main
                   0x001b02                  _measureShunt_1
                   0x001b74                  _measureShunt_2
                   0x001c3a                  _measureTempMOSFET
@@ -718,7 +718,7 @@ __FALTREG
  .debug_abbrev    0x000ca6         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
  .debug_abbrev    0x000cba         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
 
-.debug_line       0x000000       0x17f3
+.debug_line       0x000000       0x17f2
  *(.debug_line)
  .debug_line      0x000000        0x1bc build/default/production/_ext/1769188794/adc1.o
  .debug_line      0x0001bc        0x10d build/default/production/_ext/1769188794/clock.o
@@ -731,28 +731,28 @@ __FALTREG
  .debug_line      0x000890        0x141 build/default/production/_ext/1769188794/system.o
  .debug_line      0x0009d1        0x136 build/default/production/_ext/1769188794/traps.o
  .debug_line      0x000b07        0x22e build/default/production/_ext/1472/lib_ecomet.o
- .debug_line      0x000d35        0x19b build/default/production/_ext/1472/main.o
- .debug_line      0x000ed0         0x37 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
- .debug_line      0x000f07         0x35 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
- .debug_line      0x000f3c         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
- .debug_line      0x000f92         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
- .debug_line      0x000fe5         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
- .debug_line      0x00101f         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
- .debug_line      0x001069        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
- .debug_line      0x00119f        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
- .debug_line      0x0012c3         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
- .debug_line      0x00138f         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
- .debug_line      0x001401         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
- .debug_line      0x00147b         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
- .debug_line      0x0014d9         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
- .debug_line      0x00152a         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
- .debug_line      0x0015c2         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
- .debug_line      0x00163b         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
- .debug_line      0x001655         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
- .debug_line      0x0016a8         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
- .debug_line      0x0016ef         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
- .debug_line      0x00175b         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
- .debug_line      0x0017b5         0x3e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
+ .debug_line      0x000d35        0x19a build/default/production/_ext/1472/main.o
+ .debug_line      0x000ecf         0x37 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
+ .debug_line      0x000f06         0x35 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
+ .debug_line      0x000f3b         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
+ .debug_line      0x000f91         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
+ .debug_line      0x000fe4         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
+ .debug_line      0x00101e         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
+ .debug_line      0x001068        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
+ .debug_line      0x00119e        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
+ .debug_line      0x0012c2         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
+ .debug_line      0x00138e         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
+ .debug_line      0x001400         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
+ .debug_line      0x00147a         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
+ .debug_line      0x0014d8         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
+ .debug_line      0x001529         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
+ .debug_line      0x0015c1         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
+ .debug_line      0x00163a         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
+ .debug_line      0x001654         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
+ .debug_line      0x0016a7         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
+ .debug_line      0x0016ee         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
+ .debug_line      0x00175a         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
+ .debug_line      0x0017b4         0x3e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
 
 .debug_frame      0x000000        0xc82
  *(.debug_frame)
@@ -3615,7 +3615,7 @@ __c30_signature
  .ivt._T1Interrupt
                   0x000016          0x2 build/default/production/_ext/1472/main.o
 
-.text             0x00183c        0xc98
+.text             0x00183c        0xc96
  .text            0x00183c        0x55e build/default/production/_ext/1472/lib_ecomet.o
                   0x0019da                  _changeDC_Motor
                   0x001a66                  _consigneCourant
@@ -3656,51 +3656,51 @@ __c30_signature
                   0x001fcc                  _ADC1_channel_AN0_CallBack
                   0x001fd4                  _ADC1_Setchannel_AN0InterruptHandler
                   0x001fe0                  _ADC1_channel_AN0_Tasks
- .text            0x001ffe        0x234 build/default/production/_ext/1472/main.o
+ .text            0x001ffe        0x232 build/default/production/_ext/1472/main.o
                   0x00204c                  _init_Timer
-                  0x002068                  _Interrupt_Init
-                  0x00207c                  _main
- .text            0x002232        0x122 build/default/production/_ext/1769188794/pwm.o
-                  0x002232                  _PWM_Initialize
-                  0x0022a0                  _PWM_Generator1_CallBack
-                  0x0022a6                  _PWM_Generator1_Tasks
-                  0x0022b8                  _PWM_EventA_CallBack
-                  0x0022be                  _PWM_EventA_Tasks
-                  0x0022d2                  _PWM_EventB_CallBack
-                  0x0022d8                  _PWM_EventB_Tasks
-                  0x0022ec                  _PWM_EventC_CallBack
-                  0x0022f2                  _PWM_EventC_Tasks
-                  0x002306                  _PWM_EventD_CallBack
-                  0x00230c                  _PWM_EventD_Tasks
-                  0x002320                  _PWM_EventE_CallBack
-                  0x002326                  _PWM_EventE_Tasks
-                  0x00233a                  _PWM_EventF_CallBack
-                  0x002340                  _PWM_EventF_Tasks
- .text            0x002354        0x114 build/default/production/_ext/1769188794/reset.o
-                  0x002354                  _RESET_GetCause
-                  0x00235c                  _RESET_CauseHandler
-                  0x002460                  _RESET_CauseClearAll
- .text            0x002468         0x6c build/default/production/_ext/1769188794/clock.o
-                  0x002468                  _CLOCK_Initialize
-                  0x0024bc                  _CLOCK_AuxPllLockStatusGet
+                  0x002066                  _Interrupt_Init
+                  0x00207a                  _main
+ .text            0x002230        0x122 build/default/production/_ext/1769188794/pwm.o
+                  0x002230                  _PWM_Initialize
+                  0x00229e                  _PWM_Generator1_CallBack
+                  0x0022a4                  _PWM_Generator1_Tasks
+                  0x0022b6                  _PWM_EventA_CallBack
+                  0x0022bc                  _PWM_EventA_Tasks
+                  0x0022d0                  _PWM_EventB_CallBack
+                  0x0022d6                  _PWM_EventB_Tasks
+                  0x0022ea                  _PWM_EventC_CallBack
+                  0x0022f0                  _PWM_EventC_Tasks
+                  0x002304                  _PWM_EventD_CallBack
+                  0x00230a                  _PWM_EventD_Tasks
+                  0x00231e                  _PWM_EventE_CallBack
+                  0x002324                  _PWM_EventE_Tasks
+                  0x002338                  _PWM_EventF_CallBack
+                  0x00233e                  _PWM_EventF_Tasks
+ .text            0x002352        0x114 build/default/production/_ext/1769188794/reset.o
+                  0x002352                  _RESET_GetCause
+                  0x00235a                  _RESET_CauseHandler
+                  0x00245e                  _RESET_CauseClearAll
+ .text            0x002466         0x6c build/default/production/_ext/1769188794/clock.o
+                  0x002466                  _CLOCK_Initialize
+                  0x0024ba                  _CLOCK_AuxPllLockStatusGet
 
-.dinit            0x0024d4         0x6c
- .dinit           0x0024d4         0x6c data_init
+.dinit            0x0024d2         0x6c
+ .dinit           0x0024d2         0x6c data_init
 
-.text             0x002540         0x7c
- .text            0x002540         0x46 build/default/production/_ext/1769188794/pin_manager.o
-                  0x002540                  _PIN_MANAGER_Initialize
- .text            0x002586         0x36 build/default/production/_ext/1769188794/system.o
-                  0x0025a4                  _SYSTEM_Initialize
+.text             0x00253e         0x7c
+ .text            0x00253e         0x46 build/default/production/_ext/1769188794/pin_manager.o
+                  0x00253e                  _PIN_MANAGER_Initialize
+ .text            0x002584         0x36 build/default/production/_ext/1769188794/system.o
+                  0x0025a2                  _SYSTEM_Initialize
 
-.init.delay32     0x0025bc         0x1c
- .init.delay32    0x0025bc         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
-                  0x0025bc                  ___delay32
+.init.delay32     0x0025ba         0x1c
+ .init.delay32    0x0025ba         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
+                  0x0025ba                  ___delay32
 
-.text             0x0025d8         0x48
- .text            0x0025d8         0x1a build/default/production/_ext/1769188794/interrupt_manager.o
-                  0x0025d8                  _INTERRUPT_Initialize
- .text            0x0025f2         0x18 build/default/production/_ext/1769188794/traps.o
-                  0x0025f2                  _TRAPS_halt_on_error
- .text            0x00260a         0x16 build/default/production/_ext/1769188794/opa.o
-                  0x002612                  _OPA_Initialize
+.text             0x0025d6         0x48
+ .text            0x0025d6         0x1a build/default/production/_ext/1769188794/interrupt_manager.o
+                  0x0025d6                  _INTERRUPT_Initialize
+ .text            0x0025f0         0x18 build/default/production/_ext/1769188794/traps.o
+                  0x0025f0                  _TRAPS_halt_on_error
+ .text            0x002608         0x16 build/default/production/_ext/1769188794/opa.o
+                  0x002610                  _OPA_Initialize

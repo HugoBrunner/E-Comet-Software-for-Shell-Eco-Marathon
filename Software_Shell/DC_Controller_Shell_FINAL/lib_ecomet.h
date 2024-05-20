@@ -7,7 +7,7 @@ extern "C" {
 
 void changeDC_Motor();
 
-int consigneCourant();
+float consigneCourant();
 
 void changeDC_Motor_Error(int DC_Motor);
 
