@@ -28,7 +28,7 @@ void init_Timer( void ){
     T1CONbits.TCS = 0;      //Select internal clock as the timer clock source
     T1CONbits.TSYNC = 0;    //External clock source is left unsynchronized
     
-    PR1 = 500;              // 100 ms de delay
+    PR1 = 50000;              // 1 ms de delay
 }
 
 void Interrupt_Init( void ){
@@ -43,11 +43,11 @@ float Umax = 52;             // Volts
 float TempMOSmax = 75;       // °C
 float TempPICmax = 125;      // °C
 
-float DeltaT = 0.001;        // temps d'échantillonage régulation
+float DeltaT = 0.1;        // temps d'échantillonage régulation
 int consigne = 0;
 
-float K_p = 0.004497;        // coefficient proportionnel
-float K_i = 10.39;           // coefficient intégral
+float K_p = 1;        // coefficient proportionnel : 0.004497
+float K_i = 10.39;           // coefficient intégral : 10.39
 
 float erreur = 0;
 float u = 0;                 // commande du Buck
@@ -71,7 +71,7 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
         
         if (consigne != 0) {
    
-            integral = integral + sat*erreur*DeltaT;
+            integral = integral + erreur*DeltaT;
             sat = 1;
         }else{
             
@@ -82,16 +82,14 @@ void __attribute__((interrupt, auto_psv)) _T1Interrupt( void ){
         
         if (u/36*150 >= 150){
             
-            u = 150;
-            //integral = 0;
-            sat = 0;
+            u = 36;
+            integral = 36;
         } 
         
         if(u/36*150 < 0){
             
             u = 0;
             //integral = 0;
-            sat = 0;
         }
         
         u = (int)(u*150/36);
