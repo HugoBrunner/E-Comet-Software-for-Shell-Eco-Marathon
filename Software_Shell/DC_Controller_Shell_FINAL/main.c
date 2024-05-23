@@ -53,6 +53,7 @@ float K_i = 10; // coefficient intégral : 10.39
 
 float erreur = 0;
 float u = 0; // commande du Buck
+float ValueStepMax=0; 
 float integral = 0;
 int currentState = 2;
 
@@ -244,17 +245,19 @@ int main(void) {
                 consigne = consigneCourant();                
                 
                 if (consigne >=1 && consigne <3)
-                    u=35;
+                    ValueStepMax=35;
                 if (consigne >=3 && consigne <5)
-                    u=55;
+                    ValueStepMax=55;
                 else if (consigne >=5 && consigne <7)
-                    u=90;
+                    ValueStepMax=90;
                 else if (consigne >=7 && consigne <9 )
-                  u=120;
+                  ValueStepMax=120;
                 else if (consigne >=9 )
-                  u=150;
+                  ValueStepMax=150;
                 else
-                    u=0;
+                    ValueStepMax=0;
+                 
+                
                 
                 PWM_DutyCycleSet(PWM_GENERATOR_1, u);
                 PWM_DeadTimeHighSet(PWM_GENERATOR_1, 1); // Dead time H : 250 ns 
