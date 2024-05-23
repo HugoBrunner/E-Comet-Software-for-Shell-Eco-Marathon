@@ -4,17 +4,10 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.00 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.01 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.02 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.03 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.04 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.05 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.06 \
   -p33CK32MP105 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/dsPIC33CK-MP_DFP/1.12.354/xc16 \
   -o \
-  dist/default/debug/Ecomet_All_ADC_PWM_OPAMP_corrige.X.debug.elf \
+  dist/default/production/Ecomet_All_ADC_PWM_OPAMP_corrige.X.production.elf \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/.. \
   -LC:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/dsPIC33CK-MP_DFP/1.12.354/xc16/bin/../support/dsPIC33C/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../lib \
@@ -25,24 +18,21 @@ Command:
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33C/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33F/gld \
-  build/default/debug/_ext/1769188794/adc1.o \
-  build/default/debug/_ext/1769188794/clock.o \
-  build/default/debug/_ext/1769188794/interrupt_manager.o \
-  build/default/debug/_ext/1769188794/mcc.o \
-  build/default/debug/_ext/1769188794/opa.o \
-  build/default/debug/_ext/1769188794/pin_manager.o \
-  build/default/debug/_ext/1769188794/pwm.o \
-  build/default/debug/_ext/1769188794/reset.o \
-  build/default/debug/_ext/1769188794/system.o \
-  build/default/debug/_ext/1769188794/traps.o \
-  build/default/debug/_ext/1472/lib_ecomet.o \
-  build/default/debug/_ext/1472/main.o \
+  build/default/production/_ext/1769188794/adc1.o \
+  build/default/production/_ext/1769188794/clock.o \
+  build/default/production/_ext/1769188794/interrupt_manager.o \
+  build/default/production/_ext/1769188794/mcc.o \
+  build/default/production/_ext/1769188794/opa.o \
+  build/default/production/_ext/1769188794/pin_manager.o \
+  build/default/production/_ext/1769188794/pwm.o \
+  build/default/production/_ext/1769188794/reset.o \
+  build/default/production/_ext/1769188794/system.o \
+  build/default/production/_ext/1769188794/traps.o \
+  build/default/production/_ext/1472/lib_ecomet.o \
+  build/default/production/_ext/1472/main.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
-  --defsym=__MPLAB_DEBUG=1 \
-  --defsym=__DEBUG=1 \
-  --defsym=__MPLAB_DEBUGGER_ICD3=1 \
-  -Tp33CK32MP105.gld.07 \
+  -Tp33CK32MP105.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -54,10 +44,10 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/debug/Ecomet_All_ADC_PWM_OPAMP_corrige.X.debug.map \
+  -Map=dist/default/production/Ecomet_All_ADC_PWM_OPAMP_corrige.X.production.map \
   --report-mem \
   --memorysummary \
-  dist/default/debug/memoryfile.xml \
+  dist/default/production/memoryfile.xml \
   -start-group \
   --library=c99-pic30-elf \
   --library=m-elf \
@@ -75,25 +65,25 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
                               (__crt_start_mode_normal)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
-                              build/default/debug/_ext/1472/main.o (___delay32)
+                              build/default/production/_ext/1472/main.o (___delay32)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
-                              build/default/debug/_ext/1472/main.o (___ltsf2)
+                              build/default/production/_ext/1472/main.o (___ltsf2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
-                              build/default/debug/_ext/1472/main.o (___gesf2)
+                              build/default/production/_ext/1472/main.o (___gesf2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (_(float, int, long long, short, float, short, int))
+                              build/default/production/_ext/1472/lib_ecomet.o (_(float, int, long long, short, float, short, int))
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixunssfsi.CH_o)
-                              build/default/debug/_ext/1472/main.o (___fixunssfsi)
+                              build/default/production/_ext/1472/main.o (___fixunssfsi)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (___floatsisf)
+                              build/default/production/_ext/1472/lib_ecomet.o (___floatsisf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o) (__funpack)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (___subsf3)
+                              build/default/production/_ext/1472/lib_ecomet.o (___subsf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (___divsf3)
+                              build/default/production/_ext/1472/lib_ecomet.o (___divsf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (___mulsf3)
+                              build/default/production/_ext/1472/lib_ecomet.o (___mulsf3)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o) (__dnrmpackf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
@@ -119,9 +109,9 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o) (__funpack2)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(powf.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (_powf)
+                              build/default/production/_ext/1472/lib_ecomet.o (_powf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(roundf.CH_o)
-                              build/default/debug/_ext/1472/lib_ecomet.o (_roundf)
+                              build/default/production/_ext/1472/lib_ecomet.o (_roundf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(scalbnf.CH_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(powf.CH_o) (_scalbnf)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(sqrtf.CH_o)
@@ -168,30 +158,23 @@ section                    address   length (PC units)   length (bytes) (dec)
 .dinit                      0x2494                0x60            0x90  (144)
 .text                       0x24f4                0x7c            0xba  (186)
 .init.delay32               0x2570                0x1c            0x2a  (42)
-.text                       0x258c                0x4a            0x6f  (111)
+.text                       0x258c                0x48            0x6c  (108)
 
-                 Total "program" memory used (bytes):         0x35c1  (13761) 38%
+                 Total "program" memory used (bytes):         0x35be  (13758) 38%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-reserve_data_0x1000         0x1000                0x1c            0x1c  (28)
-reserve_data_0x101c         0x101c                 0x2             0x2  (2)
-reserve_data_0x101e         0x101e                 0x2             0x2  (2)
-reserve_data_0x1020         0x1020                 0x2             0x2  (2)
-reserve_data_0x1022         0x1022                 0x2             0x2  (2)
-reserve_data_0x1024         0x1024                 0x4             0x4  (4)
-reserve_data_0x1028         0x1028                0x28            0x28  (40)
-.nbss                       0x1050                   0            0x34  (52)
-.ndata                      0x1084                   0            0x18  (24)
-.nbss                       0x109c                   0             0x2  (2)
-.bss                        0x109e                   0            0x20  (32)
-.data                       0x10be                   0            0x18  (24)
-.bss                        0x10d6                   0             0x2  (2)
+.nbss                       0x1000                   0            0x34  (52)
+.ndata                      0x1034                   0            0x18  (24)
+.nbss                       0x104c                   0             0x2  (2)
+.bss                        0x104e                   0            0x20  (32)
+.data                       0x106e                   0            0x18  (24)
+.bss                        0x1086                   0             0x2  (2)
 
-                 Total "data" memory used (bytes):           0xd8  (216) 2%
+                 Total "data" memory used (bytes):           0x88  (136) 1%
 
 
 Dynamic Memory Usage
@@ -199,52 +182,52 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x10d8                              0x1f28  (7976)
+stack                       0x1088                              0x1f78  (8056)
 
-                 Maximum dynamic memory (bytes):         0x1f28  (7976)
+                 Maximum dynamic memory (bytes):         0x1f78  (8056)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
 
 External Symbols in Data Memory (by address):
 
-                    0x1050                  _DC_Motor
-                    0x1052                  _VBUS
-                    0x1056                  _courantBatt
-                    0x105a                  _tempMOS
-                    0x105e                  _tempPIC
-                    0x1062                  _courantMoteur
-                    0x1066                  _consigne
-                    0x1068                  _erreur
-                    0x106c                  _u
-                    0x1070                  _integral
-                    0x1084                  _DeltaT
-                    0x1088                  _K_p
-                    0x108c                  _K_i
-                    0x1090                  _currentState
-                    0x1092                  _Rshunt
-                    0x1096                  _Ualim
-                    0x10d6                  ___errno_val
+                    0x1000                  _DC_Motor
+                    0x1002                  _VBUS
+                    0x1006                  _courantBatt
+                    0x100a                  _tempMOS
+                    0x100e                  _tempPIC
+                    0x1012                  _courantMoteur
+                    0x1016                  _consigne
+                    0x1018                  _erreur
+                    0x101c                  _u
+                    0x1020                  _integral
+                    0x1034                  _DeltaT
+                    0x1038                  _K_p
+                    0x103c                  _K_i
+                    0x1040                  _currentState
+                    0x1042                  _Rshunt
+                    0x1046                  _Ualim
+                    0x1086                  ___errno_val
 
 External Symbols in Data Memory (by name):
 
-                    0x1050                  _DC_Motor
-                    0x1084                  _DeltaT
-                    0x108c                  _K_i
-                    0x1088                  _K_p
-                    0x1092                  _Rshunt
-                    0x1096                  _Ualim
-                    0x1052                  _VBUS
-                    0x10d6                  ___errno_val
-                    0x1066                  _consigne
-                    0x1056                  _courantBatt
-                    0x1062                  _courantMoteur
-                    0x1090                  _currentState
-                    0x1068                  _erreur
-                    0x1070                  _integral
-                    0x105a                  _tempMOS
-                    0x105e                  _tempPIC
-                    0x106c                  _u
+                    0x1000                  _DC_Motor
+                    0x1034                  _DeltaT
+                    0x103c                  _K_i
+                    0x1038                  _K_p
+                    0x1042                  _Rshunt
+                    0x1046                  _Ualim
+                    0x1002                  _VBUS
+                    0x1086                  ___errno_val
+                    0x1016                  _consigne
+                    0x1006                  _courantBatt
+                    0x1012                  _courantMoteur
+                    0x1040                  _currentState
+                    0x1018                  _erreur
+                    0x1020                  _integral
+                    0x100a                  _tempMOS
+                    0x100e                  _tempPIC
+                    0x101c                  _u
 
 External Symbols in Program Memory (by address):
 
@@ -337,7 +320,7 @@ External Symbols in Program Memory (by address):
                   0x002558                  _SYSTEM_Initialize
                   0x002570                  ___delay32
                   0x00258c                  _INTERRUPT_Initialize
-                  0x0025c8                  _OPA_Initialize
+                  0x0025c6                  _OPA_Initialize
                   0x005f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
@@ -360,7 +343,7 @@ External Symbols in Program Memory (by name):
                   0x002428                  _CLOCK_Initialize
                   0x00258c                  _INTERRUPT_Initialize
                   0x001caa                  _Interrupt_Init
-                  0x0025c8                  _OPA_Initialize
+                  0x0025c6                  _OPA_Initialize
                   0x0024f4                  _PIN_MANAGER_Initialize
                   0x00227e                  _PWM_EventA_Tasks
                   0x002298                  _PWM_EventB_Tasks
@@ -459,57 +442,19 @@ FALTREG          0x005f44           0x000002
 
 Linker script and memory map
 
-
-reserve_data_0x1000
-                    0x1000         0x1c
-                    0x101c                  . = 0x1c
- *fill*             0x1000         0x1c00
-
-reserve_data_0x101c
-                    0x101c          0x2
-                    0x101e                  . = 0x2
- *fill*             0x101c          0x200
-
-reserve_data_0x101e
-                    0x101e          0x2
-                    0x1020                  . = 0x2
- *fill*             0x101e          0x200
-
-reserve_data_0x1020
-                    0x1020          0x2
-                    0x1022                  . = 0x2
- *fill*             0x1020          0x200
-
-reserve_data_0x1022
-                    0x1022          0x2
-                    0x1024                  . = 0x2
- *fill*             0x1022          0x200
-
-reserve_data_0x1024
-                    0x1024          0x4
-                    0x1028                  . = 0x4
- *fill*             0x1024          0x400
-
-reserve_data_0x1028
-                    0x1028         0x28
-                    0x1050                  . = 0x28
- *fill*             0x1028         0x2800
-LOAD build/default/debug/_ext/1769188794/adc1.o
-LOAD build/default/debug/_ext/1769188794/clock.o
-LOAD build/default/debug/_ext/1769188794/interrupt_manager.o
-LOAD build/default/debug/_ext/1769188794/mcc.o
-LOAD build/default/debug/_ext/1769188794/opa.o
-LOAD build/default/debug/_ext/1769188794/pin_manager.o
-LOAD build/default/debug/_ext/1769188794/pwm.o
-LOAD build/default/debug/_ext/1769188794/reset.o
-LOAD build/default/debug/_ext/1769188794/system.o
-LOAD build/default/debug/_ext/1769188794/traps.o
-LOAD build/default/debug/_ext/1472/lib_ecomet.o
-LOAD build/default/debug/_ext/1472/main.o
+LOAD build/default/production/_ext/1769188794/adc1.o
+LOAD build/default/production/_ext/1769188794/clock.o
+LOAD build/default/production/_ext/1769188794/interrupt_manager.o
+LOAD build/default/production/_ext/1769188794/mcc.o
+LOAD build/default/production/_ext/1769188794/opa.o
+LOAD build/default/production/_ext/1769188794/pin_manager.o
+LOAD build/default/production/_ext/1769188794/pwm.o
+LOAD build/default/production/_ext/1769188794/reset.o
+LOAD build/default/production/_ext/1769188794/system.o
+LOAD build/default/production/_ext/1769188794/traps.o
+LOAD build/default/production/_ext/1472/lib_ecomet.o
+LOAD build/default/production/_ext/1472/main.o
                     0x0001                  __MPLAB_BUILD = 0x1
-                    0x0001                  __MPLAB_DEBUG = 0x1
-                    0x0001                  __DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_ICD3 = 0x1
 LOAD p33CK32MP105
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                     0x801030                  _iwri1 = 0x801030
@@ -555,18 +500,18 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x00031a         0x78 build/default/debug/_ext/1769188794/adc1.o
+ .isr.text        0x00031a         0x78 build/default/production/_ext/1769188794/adc1.o
                   0x00031a                  __ADCAN19Interrupt
                   0x000356                  __ADCAN20Interrupt
  .isrerror_handler
-                  0x000392         0xdc build/default/debug/_ext/1769188794/traps.o
+                  0x000392         0xdc build/default/production/_ext/1769188794/traps.o
                   0x000392                  __OscillatorFail
                   0x0003b2                  __StackError
                   0x0003d4                  __AddressError
                   0x0003f4                  __MathError
                   0x000414                  __HardTrapError
                   0x000434                  __SoftTrapError
- .isr.text        0x00046e         0x1a build/default/debug/_ext/1472/main.o
+ .isr.text        0x00046e         0x1a build/default/production/_ext/1472/main.o
                   0x00046e                  __T1Interrupt
  .isr             0x000488          0x4 default_isr
                   0x000488                  __DefaultInterrupt
@@ -696,17 +641,17 @@ __FALTREG
 
 .debug_info       0x000000       0xd335
  *(.debug_info)
- .debug_info      0x000000       0x2883 build/default/debug/_ext/1769188794/adc1.o
- .debug_info      0x002883        0x5ce build/default/debug/_ext/1769188794/clock.o
- .debug_info      0x002e51        0x286 build/default/debug/_ext/1769188794/interrupt_manager.o
- .debug_info      0x0030d7        0x2c1 build/default/debug/_ext/1769188794/opa.o
- .debug_info      0x003398        0x4e7 build/default/debug/_ext/1769188794/pin_manager.o
- .debug_info      0x00387f       0x1108 build/default/debug/_ext/1769188794/pwm.o
- .debug_info      0x004987        0x500 build/default/debug/_ext/1769188794/reset.o
- .debug_info      0x004e87       0x2133 build/default/debug/_ext/1769188794/system.o
- .debug_info      0x006fba        0x661 build/default/debug/_ext/1769188794/traps.o
- .debug_info      0x00761b       0x2bdf build/default/debug/_ext/1472/lib_ecomet.o
- .debug_info      0x00a1fa       0x2594 build/default/debug/_ext/1472/main.o
+ .debug_info      0x000000       0x2883 build/default/production/_ext/1769188794/adc1.o
+ .debug_info      0x002883        0x5ce build/default/production/_ext/1769188794/clock.o
+ .debug_info      0x002e51        0x286 build/default/production/_ext/1769188794/interrupt_manager.o
+ .debug_info      0x0030d7        0x2c1 build/default/production/_ext/1769188794/opa.o
+ .debug_info      0x003398        0x4e7 build/default/production/_ext/1769188794/pin_manager.o
+ .debug_info      0x00387f       0x1108 build/default/production/_ext/1769188794/pwm.o
+ .debug_info      0x004987        0x500 build/default/production/_ext/1769188794/reset.o
+ .debug_info      0x004e87       0x2133 build/default/production/_ext/1769188794/system.o
+ .debug_info      0x006fba        0x661 build/default/production/_ext/1769188794/traps.o
+ .debug_info      0x00761b       0x2bdf build/default/production/_ext/1472/lib_ecomet.o
+ .debug_info      0x00a1fa       0x2594 build/default/production/_ext/1472/main.o
  .debug_info      0x00c78e         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
  .debug_info      0x00c81b         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
  .debug_info      0x00c8a6         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
@@ -731,18 +676,18 @@ __FALTREG
 
 .debug_abbrev     0x000000        0xcc3
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x156 build/default/debug/_ext/1769188794/adc1.o
- .debug_abbrev    0x000156         0xda build/default/debug/_ext/1769188794/clock.o
- .debug_abbrev    0x000230         0x8a build/default/debug/_ext/1769188794/interrupt_manager.o
- .debug_abbrev    0x0002ba          0x1 build/default/debug/_ext/1769188794/mcc.o
- .debug_abbrev    0x0002bb         0x9d build/default/debug/_ext/1769188794/opa.o
- .debug_abbrev    0x000358         0x59 build/default/debug/_ext/1769188794/pin_manager.o
- .debug_abbrev    0x0003b1         0xb0 build/default/debug/_ext/1769188794/pwm.o
- .debug_abbrev    0x000461         0xf6 build/default/debug/_ext/1769188794/reset.o
- .debug_abbrev    0x000557        0x125 build/default/debug/_ext/1769188794/system.o
- .debug_abbrev    0x00067c        0x10d build/default/debug/_ext/1769188794/traps.o
- .debug_abbrev    0x000789        0x230 build/default/debug/_ext/1472/lib_ecomet.o
- .debug_abbrev    0x0009b9        0x17a build/default/debug/_ext/1472/main.o
+ .debug_abbrev    0x000000        0x156 build/default/production/_ext/1769188794/adc1.o
+ .debug_abbrev    0x000156         0xda build/default/production/_ext/1769188794/clock.o
+ .debug_abbrev    0x000230         0x8a build/default/production/_ext/1769188794/interrupt_manager.o
+ .debug_abbrev    0x0002ba          0x1 build/default/production/_ext/1769188794/mcc.o
+ .debug_abbrev    0x0002bb         0x9d build/default/production/_ext/1769188794/opa.o
+ .debug_abbrev    0x000358         0x59 build/default/production/_ext/1769188794/pin_manager.o
+ .debug_abbrev    0x0003b1         0xb0 build/default/production/_ext/1769188794/pwm.o
+ .debug_abbrev    0x000461         0xf6 build/default/production/_ext/1769188794/reset.o
+ .debug_abbrev    0x000557        0x125 build/default/production/_ext/1769188794/system.o
+ .debug_abbrev    0x00067c        0x10d build/default/production/_ext/1769188794/traps.o
+ .debug_abbrev    0x000789        0x230 build/default/production/_ext/1472/lib_ecomet.o
+ .debug_abbrev    0x0009b9        0x17a build/default/production/_ext/1472/main.o
  .debug_abbrev    0x000b33         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
  .debug_abbrev    0x000b47         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
  .debug_abbrev    0x000b5b         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
@@ -766,18 +711,18 @@ __FALTREG
 
 .debug_line       0x000000       0x19cf
  *(.debug_line)
- .debug_line      0x000000        0x1e6 build/default/debug/_ext/1769188794/adc1.o
- .debug_line      0x0001e6        0x137 build/default/debug/_ext/1769188794/clock.o
- .debug_line      0x00031d        0x12c build/default/debug/_ext/1769188794/interrupt_manager.o
- .debug_line      0x000449         0x1a build/default/debug/_ext/1769188794/mcc.o
- .debug_line      0x000463        0x130 build/default/debug/_ext/1769188794/opa.o
- .debug_line      0x000593        0x13c build/default/debug/_ext/1769188794/pin_manager.o
- .debug_line      0x0006cf        0x17d build/default/debug/_ext/1769188794/pwm.o
- .debug_line      0x00084c        0x16a build/default/debug/_ext/1769188794/reset.o
- .debug_line      0x0009b6        0x16b build/default/debug/_ext/1769188794/system.o
- .debug_line      0x000b21        0x160 build/default/debug/_ext/1769188794/traps.o
- .debug_line      0x000c81        0x25e build/default/debug/_ext/1472/lib_ecomet.o
- .debug_line      0x000edf        0x1cd build/default/debug/_ext/1472/main.o
+ .debug_line      0x000000        0x1e6 build/default/production/_ext/1769188794/adc1.o
+ .debug_line      0x0001e6        0x137 build/default/production/_ext/1769188794/clock.o
+ .debug_line      0x00031d        0x12c build/default/production/_ext/1769188794/interrupt_manager.o
+ .debug_line      0x000449         0x1a build/default/production/_ext/1769188794/mcc.o
+ .debug_line      0x000463        0x130 build/default/production/_ext/1769188794/opa.o
+ .debug_line      0x000593        0x13c build/default/production/_ext/1769188794/pin_manager.o
+ .debug_line      0x0006cf        0x17d build/default/production/_ext/1769188794/pwm.o
+ .debug_line      0x00084c        0x16a build/default/production/_ext/1769188794/reset.o
+ .debug_line      0x0009b6        0x16b build/default/production/_ext/1769188794/system.o
+ .debug_line      0x000b21        0x160 build/default/production/_ext/1769188794/traps.o
+ .debug_line      0x000c81        0x25e build/default/production/_ext/1472/lib_ecomet.o
+ .debug_line      0x000edf        0x1cd build/default/production/_ext/1472/main.o
  .debug_line      0x0010ac         0x37 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
  .debug_line      0x0010e3         0x35 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
  .debug_line      0x001118         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
@@ -802,30 +747,30 @@ __FALTREG
 
 .debug_frame      0x000000        0xc4e
  *(.debug_frame)
- .debug_frame     0x000000        0x344 build/default/debug/_ext/1769188794/adc1.o
- .debug_frame     0x000344         0x48 build/default/debug/_ext/1769188794/clock.o
- .debug_frame     0x00038c         0x2e build/default/debug/_ext/1769188794/interrupt_manager.o
- .debug_frame     0x0003ba         0x48 build/default/debug/_ext/1769188794/opa.o
- .debug_frame     0x000402         0x2e build/default/debug/_ext/1769188794/pin_manager.o
- .debug_frame     0x000430        0x19a build/default/debug/_ext/1769188794/pwm.o
- .debug_frame     0x0005ca        0x118 build/default/debug/_ext/1769188794/reset.o
- .debug_frame     0x0006e2         0x62 build/default/debug/_ext/1769188794/system.o
- .debug_frame     0x000744        0x1bc build/default/debug/_ext/1769188794/traps.o
- .debug_frame     0x000900        0x272 build/default/debug/_ext/1472/lib_ecomet.o
- .debug_frame     0x000b72         0xdc build/default/debug/_ext/1472/main.o
+ .debug_frame     0x000000        0x344 build/default/production/_ext/1769188794/adc1.o
+ .debug_frame     0x000344         0x48 build/default/production/_ext/1769188794/clock.o
+ .debug_frame     0x00038c         0x2e build/default/production/_ext/1769188794/interrupt_manager.o
+ .debug_frame     0x0003ba         0x48 build/default/production/_ext/1769188794/opa.o
+ .debug_frame     0x000402         0x2e build/default/production/_ext/1769188794/pin_manager.o
+ .debug_frame     0x000430        0x19a build/default/production/_ext/1769188794/pwm.o
+ .debug_frame     0x0005ca        0x118 build/default/production/_ext/1769188794/reset.o
+ .debug_frame     0x0006e2         0x62 build/default/production/_ext/1769188794/system.o
+ .debug_frame     0x000744        0x1bc build/default/production/_ext/1769188794/traps.o
+ .debug_frame     0x000900        0x272 build/default/production/_ext/1472/lib_ecomet.o
+ .debug_frame     0x000b72         0xdc build/default/production/_ext/1472/main.o
 
 .debug_str        0x000000        0x895
  *(.debug_str)
- .debug_str       0x000000        0x27b build/default/debug/_ext/1769188794/adc1.o
- .debug_str       0x00027b         0x44 build/default/debug/_ext/1769188794/clock.o
- .debug_str       0x0002bf          0xa build/default/debug/_ext/1769188794/interrupt_manager.o
- .debug_str       0x0002c9         0x1f build/default/debug/_ext/1769188794/opa.o
- .debug_str       0x0002e8         0xf1 build/default/debug/_ext/1769188794/pwm.o
- .debug_str       0x0003d9         0x17 build/default/debug/_ext/1769188794/reset.o
- .debug_str       0x0003f0        0x145 build/default/debug/_ext/1769188794/system.o
- .debug_str       0x000535         0x24 build/default/debug/_ext/1769188794/traps.o
- .debug_str       0x000559        0x1ad build/default/debug/_ext/1472/lib_ecomet.o
- .debug_str       0x000706        0x18f build/default/debug/_ext/1472/main.o
+ .debug_str       0x000000        0x27b build/default/production/_ext/1769188794/adc1.o
+ .debug_str       0x00027b         0x44 build/default/production/_ext/1769188794/clock.o
+ .debug_str       0x0002bf          0xa build/default/production/_ext/1769188794/interrupt_manager.o
+ .debug_str       0x0002c9         0x1f build/default/production/_ext/1769188794/opa.o
+ .debug_str       0x0002e8         0xf1 build/default/production/_ext/1769188794/pwm.o
+ .debug_str       0x0003d9         0x17 build/default/production/_ext/1769188794/reset.o
+ .debug_str       0x0003f0        0x145 build/default/production/_ext/1769188794/system.o
+ .debug_str       0x000535         0x24 build/default/production/_ext/1769188794/traps.o
+ .debug_str       0x000559        0x1ad build/default/production/_ext/1472/lib_ecomet.o
+ .debug_str       0x000706        0x18f build/default/production/_ext/1472/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -837,27 +782,27 @@ __FALTREG
                   0x000000        0x89f
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000        0x367 build/default/debug/_ext/1769188794/adc1.o
+                  0x000000        0x367 build/default/production/_ext/1769188794/adc1.o
  .debug_pubnames
-                  0x000367         0x45 build/default/debug/_ext/1769188794/clock.o
+                  0x000367         0x45 build/default/production/_ext/1769188794/clock.o
  .debug_pubnames
-                  0x0003ac         0x2b build/default/debug/_ext/1769188794/interrupt_manager.o
+                  0x0003ac         0x2b build/default/production/_ext/1769188794/interrupt_manager.o
  .debug_pubnames
-                  0x0003d7         0x25 build/default/debug/_ext/1769188794/opa.o
+                  0x0003d7         0x25 build/default/production/_ext/1769188794/opa.o
  .debug_pubnames
-                  0x0003fc         0x2d build/default/debug/_ext/1769188794/pin_manager.o
+                  0x0003fc         0x2d build/default/production/_ext/1769188794/pin_manager.o
  .debug_pubnames
-                  0x000429        0x168 build/default/debug/_ext/1769188794/pwm.o
+                  0x000429        0x168 build/default/production/_ext/1769188794/pwm.o
  .debug_pubnames
-                  0x000591         0x54 build/default/debug/_ext/1769188794/reset.o
+                  0x000591         0x54 build/default/production/_ext/1769188794/reset.o
  .debug_pubnames
-                  0x0005e5         0x28 build/default/debug/_ext/1769188794/system.o
+                  0x0005e5         0x28 build/default/production/_ext/1769188794/system.o
  .debug_pubnames
-                  0x00060d         0x95 build/default/debug/_ext/1769188794/traps.o
+                  0x00060d         0x95 build/default/production/_ext/1769188794/traps.o
  .debug_pubnames
-                  0x0006a2        0x146 build/default/debug/_ext/1472/lib_ecomet.o
+                  0x0006a2        0x146 build/default/production/_ext/1472/lib_ecomet.o
  .debug_pubnames
-                  0x0007e8         0xb7 build/default/debug/_ext/1472/main.o
+                  0x0007e8         0xb7 build/default/production/_ext/1472/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -865,27 +810,27 @@ __FALTREG
 .debug_aranges    0x000000        0x3b8
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/debug/_ext/1769188794/adc1.o
+                  0x000000         0x18 build/default/production/_ext/1769188794/adc1.o
  .debug_aranges
-                  0x000018         0x18 build/default/debug/_ext/1769188794/clock.o
+                  0x000018         0x18 build/default/production/_ext/1769188794/clock.o
  .debug_aranges
-                  0x000030         0x18 build/default/debug/_ext/1769188794/interrupt_manager.o
+                  0x000030         0x18 build/default/production/_ext/1769188794/interrupt_manager.o
  .debug_aranges
-                  0x000048         0x18 build/default/debug/_ext/1769188794/opa.o
+                  0x000048         0x18 build/default/production/_ext/1769188794/opa.o
  .debug_aranges
-                  0x000060         0x18 build/default/debug/_ext/1769188794/pin_manager.o
+                  0x000060         0x18 build/default/production/_ext/1769188794/pin_manager.o
  .debug_aranges
-                  0x000078         0x18 build/default/debug/_ext/1769188794/pwm.o
+                  0x000078         0x18 build/default/production/_ext/1769188794/pwm.o
  .debug_aranges
-                  0x000090         0x18 build/default/debug/_ext/1769188794/reset.o
+                  0x000090         0x18 build/default/production/_ext/1769188794/reset.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/debug/_ext/1769188794/system.o
+                  0x0000a8         0x18 build/default/production/_ext/1769188794/system.o
  .debug_aranges
-                  0x0000c0         0x48 build/default/debug/_ext/1769188794/traps.o
+                  0x0000c0         0x48 build/default/production/_ext/1769188794/traps.o
  .debug_aranges
-                  0x000108         0x18 build/default/debug/_ext/1472/lib_ecomet.o
+                  0x000108         0x18 build/default/production/_ext/1472/lib_ecomet.o
  .debug_aranges
-                  0x000120         0x18 build/default/debug/_ext/1472/main.o
+                  0x000120         0x18 build/default/production/_ext/1472/main.o
  .debug_aranges
                   0x000138         0x20 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(feqltle.CH_o)
  .debug_aranges
@@ -3415,7 +3360,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a
 END GROUP
-OUTPUT(dist/default/debug/Ecomet_All_ADC_PWM_OPAMP_corrige.X.debug.elf elf32-pic30)
+OUTPUT(dist/default/production/Ecomet_All_ADC_PWM_OPAMP_corrige.X.production.elf elf32-pic30)
 LOAD /CW/_FSEC
 LOAD jump_table
 LOAD default_isr
@@ -3424,54 +3369,54 @@ LOAD data_init
 .debug_pubtypes
                   0x0003b8        0xf19
  .debug_pubtypes
-                  0x0003b8        0x25a build/default/debug/_ext/1769188794/adc1.o
+                  0x0003b8        0x25a build/default/production/_ext/1769188794/adc1.o
  .debug_pubtypes
-                  0x000612         0x50 build/default/debug/_ext/1769188794/clock.o
+                  0x000612         0x50 build/default/production/_ext/1769188794/clock.o
  .debug_pubtypes
-                  0x000662         0x3e build/default/debug/_ext/1769188794/interrupt_manager.o
+                  0x000662         0x3e build/default/production/_ext/1769188794/interrupt_manager.o
  .debug_pubtypes
-                  0x0006a0         0x44 build/default/debug/_ext/1769188794/opa.o
+                  0x0006a0         0x44 build/default/production/_ext/1769188794/opa.o
  .debug_pubtypes
-                  0x0006e4         0x1f build/default/debug/_ext/1769188794/pin_manager.o
+                  0x0006e4         0x1f build/default/production/_ext/1769188794/pin_manager.o
  .debug_pubtypes
-                  0x000703        0x110 build/default/debug/_ext/1769188794/pwm.o
+                  0x000703        0x110 build/default/production/_ext/1769188794/pwm.o
  .debug_pubtypes
-                  0x000813         0x42 build/default/debug/_ext/1769188794/reset.o
+                  0x000813         0x42 build/default/production/_ext/1769188794/reset.o
  .debug_pubtypes
-                  0x000855        0x31e build/default/debug/_ext/1769188794/system.o
+                  0x000855        0x31e build/default/production/_ext/1769188794/system.o
  .debug_pubtypes
-                  0x000b73         0x94 build/default/debug/_ext/1769188794/traps.o
+                  0x000b73         0x94 build/default/production/_ext/1769188794/traps.o
  .debug_pubtypes
-                  0x000c07        0x37d build/default/debug/_ext/1472/lib_ecomet.o
+                  0x000c07        0x37d build/default/production/_ext/1472/lib_ecomet.o
  .debug_pubtypes
-                  0x000f84        0x34d build/default/debug/_ext/1472/main.o
+                  0x000f84        0x34d build/default/production/_ext/1472/main.o
 
 __c30_signature
                   0x0012d1         0xc6
  __c30_signature
-                  0x0012d1          0x6 build/default/debug/_ext/1769188794/adc1.o
+                  0x0012d1          0x6 build/default/production/_ext/1769188794/adc1.o
  __c30_signature
-                  0x0012d7          0x6 build/default/debug/_ext/1769188794/clock.o
+                  0x0012d7          0x6 build/default/production/_ext/1769188794/clock.o
  __c30_signature
-                  0x0012dd          0x6 build/default/debug/_ext/1769188794/interrupt_manager.o
+                  0x0012dd          0x6 build/default/production/_ext/1769188794/interrupt_manager.o
  __c30_signature
-                  0x0012e3          0x6 build/default/debug/_ext/1769188794/mcc.o
+                  0x0012e3          0x6 build/default/production/_ext/1769188794/mcc.o
  __c30_signature
-                  0x0012e9          0x6 build/default/debug/_ext/1769188794/opa.o
+                  0x0012e9          0x6 build/default/production/_ext/1769188794/opa.o
  __c30_signature
-                  0x0012ef          0x6 build/default/debug/_ext/1769188794/pin_manager.o
+                  0x0012ef          0x6 build/default/production/_ext/1769188794/pin_manager.o
  __c30_signature
-                  0x0012f5          0x6 build/default/debug/_ext/1769188794/pwm.o
+                  0x0012f5          0x6 build/default/production/_ext/1769188794/pwm.o
  __c30_signature
-                  0x0012fb          0x6 build/default/debug/_ext/1769188794/reset.o
+                  0x0012fb          0x6 build/default/production/_ext/1769188794/reset.o
  __c30_signature
-                  0x001301          0x6 build/default/debug/_ext/1769188794/system.o
+                  0x001301          0x6 build/default/production/_ext/1769188794/system.o
  __c30_signature
-                  0x001307          0x6 build/default/debug/_ext/1769188794/traps.o
+                  0x001307          0x6 build/default/production/_ext/1769188794/traps.o
  __c30_signature
-                  0x00130d          0x6 build/default/debug/_ext/1472/lib_ecomet.o
+                  0x00130d          0x6 build/default/production/_ext/1472/lib_ecomet.o
  __c30_signature
-                  0x001313          0x6 build/default/debug/_ext/1472/main.o
+                  0x001313          0x6 build/default/production/_ext/1472/main.o
  __c30_signature
                   0x001319          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
  __c30_signature
@@ -3515,147 +3460,147 @@ __c30_signature
  __c30_signature
                   0x001391          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.CH_o)
 
-.nbss               0x1050         0x34
- .nbss              0x1050         0x12 build/default/debug/_ext/1472/lib_ecomet.o
-                    0x1050                  _DC_Motor
-                    0x1052                  _VBUS
-                    0x1056                  _courantBatt
-                    0x105a                  _tempMOS
-                    0x105e                  _tempPIC
- .nbss              0x1062         0x12 build/default/debug/_ext/1472/main.o
-                    0x1062                  _courantMoteur
-                    0x1066                  _consigne
-                    0x1068                  _erreur
-                    0x106c                  _u
-                    0x1070                  _integral
- .nbss              0x1074         0x10 build/default/debug/_ext/1769188794/adc1.o
+.nbss               0x1000         0x34
+ .nbss              0x1000         0x12 build/default/production/_ext/1472/lib_ecomet.o
+                    0x1000                  _DC_Motor
+                    0x1002                  _VBUS
+                    0x1006                  _courantBatt
+                    0x100a                  _tempMOS
+                    0x100e                  _tempPIC
+ .nbss              0x1012         0x12 build/default/production/_ext/1472/main.o
+                    0x1012                  _courantMoteur
+                    0x1016                  _consigne
+                    0x1018                  _erreur
+                    0x101c                  _u
+                    0x1020                  _integral
+ .nbss              0x1024         0x10 build/default/production/_ext/1769188794/adc1.o
 
-.ndata              0x1084         0x18
- .ndata             0x1084          0xe build/default/debug/_ext/1472/main.o
-                    0x1084                  _DeltaT
-                    0x1088                  _K_p
-                    0x108c                  _K_i
-                    0x1090                  _currentState
- .ndata             0x1092          0x8 build/default/debug/_ext/1472/lib_ecomet.o
-                    0x1092                  _Rshunt
-                    0x1096                  _Ualim
- .ndata             0x109a          0x2 build/default/debug/_ext/1769188794/traps.o
+.ndata              0x1034         0x18
+ .ndata             0x1034          0xe build/default/production/_ext/1472/main.o
+                    0x1034                  _DeltaT
+                    0x1038                  _K_p
+                    0x103c                  _K_i
+                    0x1040                  _currentState
+ .ndata             0x1042          0x8 build/default/production/_ext/1472/lib_ecomet.o
+                    0x1042                  _Rshunt
+                    0x1046                  _Ualim
+ .ndata             0x104a          0x2 build/default/production/_ext/1769188794/traps.o
 
-.nbss               0x109c          0x2
- .nbss              0x109c          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
-                    0x109c                  _errno
+.nbss               0x104c          0x2
+ .nbss              0x104c          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
+                    0x104c                  _errno
 
-.bss                0x109e         0x20
- .bss               0x109e         0x20 build/default/debug/_ext/1769188794/traps.o
+.bss                0x104e         0x20
+ .bss               0x104e         0x20 build/default/production/_ext/1769188794/traps.o
 
-.data               0x10be         0x18
- .data              0x10be         0x18 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(powf.CH_o)
+.data               0x106e         0x18
+ .data              0x106e         0x18 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a(powf.CH_o)
 
-.bss                0x10d6          0x2
- .bss               0x10d6          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.CH_o)
-                    0x10d6                  ___errno_val
+.bss                0x1086          0x2
+ .bss               0x1086          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.CH_o)
+                    0x1086                  ___errno_val
 
 .ivt._ADCAN19Interrupt
                   0x0000f0          0x2
  .ivt._ADCAN19Interrupt
-                  0x0000f0          0x2 build/default/debug/_ext/1769188794/adc1.o
+                  0x0000f0          0x2 build/default/production/_ext/1769188794/adc1.o
 
 .ivt._ADCAN20Interrupt
                   0x0000f2          0x2
  .ivt._ADCAN20Interrupt
-                  0x0000f2          0x2 build/default/debug/_ext/1769188794/adc1.o
+                  0x0000f2          0x2 build/default/production/_ext/1769188794/adc1.o
 
 .config_CTXT4     0x005f44          0x2
- .config_CTXT4    0x005f44          0x2 build/default/debug/_ext/1769188794/system.o
+ .config_CTXT4    0x005f44          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_SPI2PIN
                   0x005f40          0x2
  .config_SPI2PIN
-                  0x005f40          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f40          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_DMTDIS    0x005f3c          0x2
  .config_DMTDIS
-                  0x005f3c          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f3c          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_DMTCNTH
                   0x005f38          0x2
  .config_DMTCNTH
-                  0x005f38          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f38          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_DMTCNTL
                   0x005f34          0x2
  .config_DMTCNTL
-                  0x005f34          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f34          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_DMTIVTH
                   0x005f30          0x2
  .config_DMTIVTH
-                  0x005f30          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f30          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_DMTIVTL
                   0x005f2c          0x2
  .config_DMTIVTL
-                  0x005f2c          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f2c          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_JTAGEN    0x005f28          0x2
  .config_JTAGEN
-                  0x005f28          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f28          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_BISTDIS
                   0x005f24          0x2
  .config_BISTDIS
-                  0x005f24          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f24          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_FWDTEN    0x005f20          0x2
  .config_FWDTEN
-                  0x005f20          0x2 build/default/debug/_ext/1769188794/system.o
+                  0x005f20          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_XTBST     0x005f1c          0x2
- .config_XTBST    0x005f1c          0x2 build/default/debug/_ext/1769188794/system.o
+ .config_XTBST    0x005f1c          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_IESO      0x005f18          0x2
- .config_IESO     0x005f18          0x2 build/default/debug/_ext/1769188794/system.o
+ .config_IESO     0x005f18          0x2 build/default/production/_ext/1769188794/system.o
 
 .config_BSLIM     0x005f10          0x2
- .config_BSLIM    0x005f10          0x2 build/default/debug/_ext/1769188794/system.o
+ .config_BSLIM    0x005f10          0x2 build/default/production/_ext/1769188794/system.o
 
 .ivt._OscillatorFail
                   0x000004          0x2
  .ivt._OscillatorFail
-                  0x000004          0x2 build/default/debug/_ext/1769188794/traps.o
+                  0x000004          0x2 build/default/production/_ext/1769188794/traps.o
 
 .ivt._StackError
                   0x00000a          0x2
  .ivt._StackError
-                  0x00000a          0x2 build/default/debug/_ext/1769188794/traps.o
+                  0x00000a          0x2 build/default/production/_ext/1769188794/traps.o
 
 .ivt._AddressError
                   0x000006          0x2
  .ivt._AddressError
-                  0x000006          0x2 build/default/debug/_ext/1769188794/traps.o
+                  0x000006          0x2 build/default/production/_ext/1769188794/traps.o
 
 .ivt._MathError
                   0x00000c          0x2
  .ivt._MathError
-                  0x00000c          0x2 build/default/debug/_ext/1769188794/traps.o
+                  0x00000c          0x2 build/default/production/_ext/1769188794/traps.o
 
 .ivt._HardTrapError
                   0x000008          0x2
  .ivt._HardTrapError
-                  0x000008          0x2 build/default/debug/_ext/1769188794/traps.o
+                  0x000008          0x2 build/default/production/_ext/1769188794/traps.o
 
 .ivt._SoftTrapError
                   0x000010          0x2
  .ivt._SoftTrapError
-                  0x000010          0x2 build/default/debug/_ext/1769188794/traps.o
+                  0x000010          0x2 build/default/production/_ext/1769188794/traps.o
 
 .ivt._T1Interrupt
                   0x000016          0x2
  .ivt._T1Interrupt
-                  0x000016          0x2 build/default/debug/_ext/1472/main.o
+                  0x000016          0x2 build/default/production/_ext/1472/main.o
 
 .text             0x0016cc        0xdc8
- .text            0x0016cc        0x574 build/default/debug/_ext/1472/lib_ecomet.o
+ .text            0x0016cc        0x574 build/default/production/_ext/1472/lib_ecomet.o
                   0x00186a                  _changeDC_Motor
                   0x0018f8                  _consigneCourant
                   0x00196c                  _changeDC_Motor_Error
@@ -3668,11 +3613,11 @@ __c30_signature
                   0x001adc                  _measureTempMOSFET
                   0x001b94                  _measureTempPIC
                   0x001bf8                  _init_Ecomet
- .text            0x001c40        0x34e build/default/debug/_ext/1472/main.o
+ .text            0x001c40        0x34e build/default/production/_ext/1472/main.o
                   0x001c8e                  _init_Timer
                   0x001caa                  _Interrupt_Init
                   0x001cbe                  _main
- .text            0x001f8e        0x264 build/default/debug/_ext/1769188794/adc1.o
+ .text            0x001f8e        0x264 build/default/production/_ext/1769188794/adc1.o
                   0x001f8e                  _ADC1_Initialize
                   0x00205a                  _ADC1_Core0PowerEnable
                   0x002070                  _ADC1_Core1PowerEnable
@@ -3699,7 +3644,7 @@ __c30_signature
                   0x0021c0                  _ADC1_channel_AN0_CallBack
                   0x0021c8                  _ADC1_Setchannel_AN0InterruptHandler
                   0x0021d4                  _ADC1_channel_AN0_Tasks
- .text            0x0021f2        0x122 build/default/debug/_ext/1769188794/pwm.o
+ .text            0x0021f2        0x122 build/default/production/_ext/1769188794/pwm.o
                   0x0021f2                  _PWM_Initialize
                   0x002260                  _PWM_Generator1_CallBack
                   0x002266                  _PWM_Generator1_Tasks
@@ -3715,11 +3660,11 @@ __c30_signature
                   0x0022e6                  _PWM_EventE_Tasks
                   0x0022fa                  _PWM_EventF_CallBack
                   0x002300                  _PWM_EventF_Tasks
- .text            0x002314        0x114 build/default/debug/_ext/1769188794/reset.o
+ .text            0x002314        0x114 build/default/production/_ext/1769188794/reset.o
                   0x002314                  _RESET_GetCause
                   0x00231c                  _RESET_CauseHandler
                   0x002420                  _RESET_CauseClearAll
- .text            0x002428         0x6c build/default/debug/_ext/1769188794/clock.o
+ .text            0x002428         0x6c build/default/production/_ext/1769188794/clock.o
                   0x002428                  _CLOCK_Initialize
                   0x00247c                  _CLOCK_AuxPllLockStatusGet
 
@@ -3727,19 +3672,19 @@ __c30_signature
  .dinit           0x002494         0x60 data_init
 
 .text             0x0024f4         0x7c
- .text            0x0024f4         0x46 build/default/debug/_ext/1769188794/pin_manager.o
+ .text            0x0024f4         0x46 build/default/production/_ext/1769188794/pin_manager.o
                   0x0024f4                  _PIN_MANAGER_Initialize
- .text            0x00253a         0x36 build/default/debug/_ext/1769188794/system.o
+ .text            0x00253a         0x36 build/default/production/_ext/1769188794/system.o
                   0x002558                  _SYSTEM_Initialize
 
 .init.delay32     0x002570         0x1c
  .init.delay32    0x002570         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
                   0x002570                  ___delay32
 
-.text             0x00258c         0x4a
- .text            0x00258c         0x1a build/default/debug/_ext/1769188794/interrupt_manager.o
+.text             0x00258c         0x48
+ .text            0x00258c         0x1a build/default/production/_ext/1769188794/interrupt_manager.o
                   0x00258c                  _INTERRUPT_Initialize
- .text            0x0025a6         0x1a build/default/debug/_ext/1769188794/traps.o
+ .text            0x0025a6         0x18 build/default/production/_ext/1769188794/traps.o
                   0x0025a6                  _TRAPS_halt_on_error
- .text            0x0025c0         0x16 build/default/debug/_ext/1769188794/opa.o
-                  0x0025c8                  _OPA_Initialize
+ .text            0x0025be         0x16 build/default/production/_ext/1769188794/opa.o
+                  0x0025c6                  _OPA_Initialize

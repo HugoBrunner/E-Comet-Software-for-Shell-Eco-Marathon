@@ -244,15 +244,15 @@ int main(void) {
                 consigne = consigneCourant();                
                 
                 if (consigne >=1 && consigne <3)
-                    u=35;
+                    u=30;
                 if (consigne >=3 && consigne <5)
-                    u=55;
+                    u=50;
                 else if (consigne >=5 && consigne <7)
-                    u=90;
+                    u=85;
                 else if (consigne >=7 && consigne <9 )
-                  u=120;
+                  u=115;
                 else if (consigne >=9 )
-                  u=150;
+                  u=130;
                 else
                     u=0;
                 

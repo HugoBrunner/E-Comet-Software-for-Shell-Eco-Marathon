@@ -79,7 +79,7 @@ int consigneCourant(){                                                          
             
     int conversion = 0;
     int i=0;
-    float range = 18; // en Ampères
+    float range = 20; // en Ampères
     float courant_gachette = 0;
     
     ADC1_Initialize();
