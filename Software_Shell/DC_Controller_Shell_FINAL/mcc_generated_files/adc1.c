@@ -184,7 +184,11 @@ void ADC1_Initialize (void)
     // Enabling ADC Module
     ADCON1Lbits.ADON = 0x1;
     // Enabling Power for the Shared Core
-    ADC1_SharedCorePowerEnable();
+    
+   
+                    ADC1_SharedCorePowerEnable(); //prend du temps +- 16ms
+    
+    
     // Enabling Power for Core0
     ADC1_Core0PowerEnable();
 

@@ -30,7 +30,7 @@ int DC_Motor = 0x00;
 double Rshunt = 0.002;
 float VBUS = 0;
 float courantBatt = 0;
-float courantMoteur = 0;
+extern float courantMoteur;
 float tempMOS = 0;
 float tempPIC = 0;
 
@@ -79,7 +79,7 @@ int consigneCourant(){                                                          
             
     int conversion = 0;
     int i=0;
-    float range = 15; // en Ampères
+    float range = 18; // en Ampères
     float courant_gachette = 0;
     
     ADC1_Initialize();
@@ -181,22 +181,30 @@ float measureVBUS(){                                                            
             
     int conversion = 0;
     int i=0;
-    
-    ADC1_Initialize();
+   
+             ADC1_Initialize();
+   
 
     ADC1_Enable();
     ADC1_ChannelSelect(channel);
     ADC1_SoftwareTriggerEnable();
+     
     
     for(i=0;i <1000;i++) // laisse le temps au PIC de faire la mesure
     {
     }
-    
+//    
     ADC1_SoftwareTriggerDisable();
+    
+    
+    
     while(!ADC1_IsConversionComplete(channel));
+    
+   
     conversion = ADC1_ConversionResultGet(channel); 
     ADC1_Disable();
     VBUS = (float)(conversion/4095.0*Ualim*16.0); 
+    //LATCbits.LATC12 = 0 ;
     return VBUS;
 }
 
