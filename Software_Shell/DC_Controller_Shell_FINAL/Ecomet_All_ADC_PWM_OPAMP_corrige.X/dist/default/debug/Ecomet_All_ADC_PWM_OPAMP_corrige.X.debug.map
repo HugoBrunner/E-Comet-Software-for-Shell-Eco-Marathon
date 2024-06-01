@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.00 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.01 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.02 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.03 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.04 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.05 \
-  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000039c0.06 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.00 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.01 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.02 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.03 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.04 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.05 \
+  -TC:\\Users\\Admin-IV\\AppData\\Local\\Temp\\tmp000033ec.06 \
   -p33CK32MP105 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/dsPIC33CK-MP_DFP/1.12.354/xc16 \
   -o \
@@ -164,13 +164,13 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x14cc          0x1f32  (7986)
-.text                       0x16cc               0xdc8          0x14ac  (5292)
-.dinit                      0x2494                0x60            0x90  (144)
-.text                       0x24f4                0x7c            0xba  (186)
-.init.delay32               0x2570                0x1c            0x2a  (42)
-.text                       0x258c                0x4a            0x6f  (111)
+.text                       0x16cc               0xdca          0x14af  (5295)
+.dinit                      0x2496                0x60            0x90  (144)
+.text                       0x24f6                0x7c            0xba  (186)
+.init.delay32               0x2572                0x1c            0x2a  (42)
+.text                       0x258e                0x4a            0x6f  (111)
 
-                 Total "program" memory used (bytes):         0x35c1  (13761) 38%
+                 Total "program" memory used (bytes):         0x35c4  (13764) 38%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x2000]
@@ -309,70 +309,70 @@ External Symbols in Program Memory (by address):
                   0x001c8e                  _init_Timer
                   0x001caa                  _Interrupt_Init
                   0x001cbe                  _main
-                  0x001f8e                  _ADC1_Initialize
-                  0x00205a                  _ADC1_Core0PowerEnable
-                  0x002070                  _ADC1_Core1PowerEnable
-                  0x002086                  _ADC1_SharedCorePowerEnable
-                  0x0020a2                  _ADC1_SetCommonInterruptHandler
-                  0x0020d2                  _ADC1_Setchannel_AN7InterruptHandler
-                  0x002106                  _ADC1_Setchannel_AN12InterruptHandler
-                  0x00213a                  _ADC1_Setchannel_AN15InterruptHandler
-                  0x00216e                  _ADC1_Setchannel_AN17InterruptHandler
-                  0x0021a0                  _ADC1_Setchannel_AN19InterruptHandler
-                  0x0021b4                  _ADC1_Setchannel_AN20InterruptHandler
-                  0x0021c8                  _ADC1_Setchannel_AN0InterruptHandler
-                  0x0021f2                  _PWM_Initialize
-                  0x002266                  _PWM_Generator1_Tasks
-                  0x00227e                  _PWM_EventA_Tasks
-                  0x002298                  _PWM_EventB_Tasks
-                  0x0022b2                  _PWM_EventC_Tasks
-                  0x0022cc                  _PWM_EventD_Tasks
-                  0x0022e6                  _PWM_EventE_Tasks
-                  0x002300                  _PWM_EventF_Tasks
-                  0x002314                  _RESET_GetCause
-                  0x002420                  _RESET_CauseClearAll
-                  0x002428                  _CLOCK_Initialize
-                  0x00247c                  _CLOCK_AuxPllLockStatusGet
-                  0x0024f4                  _PIN_MANAGER_Initialize
-                  0x002558                  _SYSTEM_Initialize
-                  0x002570                  ___delay32
-                  0x00258c                  _INTERRUPT_Initialize
-                  0x0025c8                  _OPA_Initialize
+                  0x001f90                  _ADC1_Initialize
+                  0x00205c                  _ADC1_Core0PowerEnable
+                  0x002072                  _ADC1_Core1PowerEnable
+                  0x002088                  _ADC1_SharedCorePowerEnable
+                  0x0020a4                  _ADC1_SetCommonInterruptHandler
+                  0x0020d4                  _ADC1_Setchannel_AN7InterruptHandler
+                  0x002108                  _ADC1_Setchannel_AN12InterruptHandler
+                  0x00213c                  _ADC1_Setchannel_AN15InterruptHandler
+                  0x002170                  _ADC1_Setchannel_AN17InterruptHandler
+                  0x0021a2                  _ADC1_Setchannel_AN19InterruptHandler
+                  0x0021b6                  _ADC1_Setchannel_AN20InterruptHandler
+                  0x0021ca                  _ADC1_Setchannel_AN0InterruptHandler
+                  0x0021f4                  _PWM_Initialize
+                  0x002268                  _PWM_Generator1_Tasks
+                  0x002280                  _PWM_EventA_Tasks
+                  0x00229a                  _PWM_EventB_Tasks
+                  0x0022b4                  _PWM_EventC_Tasks
+                  0x0022ce                  _PWM_EventD_Tasks
+                  0x0022e8                  _PWM_EventE_Tasks
+                  0x002302                  _PWM_EventF_Tasks
+                  0x002316                  _RESET_GetCause
+                  0x002422                  _RESET_CauseClearAll
+                  0x00242a                  _CLOCK_Initialize
+                  0x00247e                  _CLOCK_AuxPllLockStatusGet
+                  0x0024f6                  _PIN_MANAGER_Initialize
+                  0x00255a                  _SYSTEM_Initialize
+                  0x002572                  ___delay32
+                  0x00258e                  _INTERRUPT_Initialize
+                  0x0025ca                  _OPA_Initialize
                   0x005f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x00205a                  _ADC1_Core0PowerEnable
-                  0x002070                  _ADC1_Core1PowerEnable
-                  0x001f8e                  _ADC1_Initialize
-                  0x0020a2                  _ADC1_SetCommonInterruptHandler
-                  0x0021c8                  _ADC1_Setchannel_AN0InterruptHandler
-                  0x002106                  _ADC1_Setchannel_AN12InterruptHandler
-                  0x00213a                  _ADC1_Setchannel_AN15InterruptHandler
-                  0x00216e                  _ADC1_Setchannel_AN17InterruptHandler
-                  0x0021a0                  _ADC1_Setchannel_AN19InterruptHandler
-                  0x0021b4                  _ADC1_Setchannel_AN20InterruptHandler
-                  0x0020d2                  _ADC1_Setchannel_AN7InterruptHandler
-                  0x002086                  _ADC1_SharedCorePowerEnable
+                  0x00205c                  _ADC1_Core0PowerEnable
+                  0x002072                  _ADC1_Core1PowerEnable
+                  0x001f90                  _ADC1_Initialize
+                  0x0020a4                  _ADC1_SetCommonInterruptHandler
+                  0x0021ca                  _ADC1_Setchannel_AN0InterruptHandler
+                  0x002108                  _ADC1_Setchannel_AN12InterruptHandler
+                  0x00213c                  _ADC1_Setchannel_AN15InterruptHandler
+                  0x002170                  _ADC1_Setchannel_AN17InterruptHandler
+                  0x0021a2                  _ADC1_Setchannel_AN19InterruptHandler
+                  0x0021b6                  _ADC1_Setchannel_AN20InterruptHandler
+                  0x0020d4                  _ADC1_Setchannel_AN7InterruptHandler
+                  0x002088                  _ADC1_SharedCorePowerEnable
                   0x001994                  _Buzzer_OFF
                   0x00199c                  _Buzzer_ON
-                  0x00247c                  _CLOCK_AuxPllLockStatusGet
-                  0x002428                  _CLOCK_Initialize
-                  0x00258c                  _INTERRUPT_Initialize
+                  0x00247e                  _CLOCK_AuxPllLockStatusGet
+                  0x00242a                  _CLOCK_Initialize
+                  0x00258e                  _INTERRUPT_Initialize
                   0x001caa                  _Interrupt_Init
-                  0x0025c8                  _OPA_Initialize
-                  0x0024f4                  _PIN_MANAGER_Initialize
-                  0x00227e                  _PWM_EventA_Tasks
-                  0x002298                  _PWM_EventB_Tasks
-                  0x0022b2                  _PWM_EventC_Tasks
-                  0x0022cc                  _PWM_EventD_Tasks
-                  0x0022e6                  _PWM_EventE_Tasks
-                  0x002300                  _PWM_EventF_Tasks
-                  0x002266                  _PWM_Generator1_Tasks
-                  0x0021f2                  _PWM_Initialize
-                  0x002420                  _RESET_CauseClearAll
-                  0x002314                  _RESET_GetCause
-                  0x002558                  _SYSTEM_Initialize
+                  0x0025ca                  _OPA_Initialize
+                  0x0024f6                  _PIN_MANAGER_Initialize
+                  0x002280                  _PWM_EventA_Tasks
+                  0x00229a                  _PWM_EventB_Tasks
+                  0x0022b4                  _PWM_EventC_Tasks
+                  0x0022ce                  _PWM_EventD_Tasks
+                  0x0022e8                  _PWM_EventE_Tasks
+                  0x002302                  _PWM_EventF_Tasks
+                  0x002268                  _PWM_Generator1_Tasks
+                  0x0021f4                  _PWM_Initialize
+                  0x002422                  _RESET_CauseClearAll
+                  0x002316                  _RESET_GetCause
+                  0x00255a                  _SYSTEM_Initialize
                   0x0003d4                  __AddressError
                   0x000488                  __DefaultInterrupt
                   0x005f00                  __FSEC.sec
@@ -384,7 +384,7 @@ External Symbols in Program Memory (by name):
                   0x00046e                  __T1Interrupt
                   0x000550                  ___addsf3
                   0x000550                  ___addsf3x
-                  0x002570                  ___delay32
+                  0x002572                  ___delay32
                   0x00071a                  ___divsf3
                   0x00071a                  ___divsf3x
                   0x00048e                  ___eqsf2
@@ -3654,7 +3654,7 @@ __c30_signature
  .ivt._T1Interrupt
                   0x000016          0x2 build/default/debug/_ext/1472/main.o
 
-.text             0x0016cc        0xdc8
+.text             0x0016cc        0xdca
  .text            0x0016cc        0x574 build/default/debug/_ext/1472/lib_ecomet.o
                   0x00186a                  _changeDC_Motor
                   0x0018f8                  _consigneCourant
@@ -3668,78 +3668,78 @@ __c30_signature
                   0x001adc                  _measureTempMOSFET
                   0x001b94                  _measureTempPIC
                   0x001bf8                  _init_Ecomet
- .text            0x001c40        0x34e build/default/debug/_ext/1472/main.o
+ .text            0x001c40        0x350 build/default/debug/_ext/1472/main.o
                   0x001c8e                  _init_Timer
                   0x001caa                  _Interrupt_Init
                   0x001cbe                  _main
- .text            0x001f8e        0x264 build/default/debug/_ext/1769188794/adc1.o
-                  0x001f8e                  _ADC1_Initialize
-                  0x00205a                  _ADC1_Core0PowerEnable
-                  0x002070                  _ADC1_Core1PowerEnable
-                  0x002086                  _ADC1_SharedCorePowerEnable
-                  0x00209c                  _ADC1_CallBack
-                  0x0020a2                  _ADC1_SetCommonInterruptHandler
-                  0x0020ae                  _ADC1_Tasks
-                  0x0020ca                  _ADC1_channel_AN7_CallBack
-                  0x0020d2                  _ADC1_Setchannel_AN7InterruptHandler
-                  0x0020de                  _ADC1_channel_AN7_Tasks
-                  0x0020fe                  _ADC1_channel_AN12_CallBack
-                  0x002106                  _ADC1_Setchannel_AN12InterruptHandler
-                  0x002112                  _ADC1_channel_AN12_Tasks
-                  0x002132                  _ADC1_channel_AN15_CallBack
-                  0x00213a                  _ADC1_Setchannel_AN15InterruptHandler
-                  0x002146                  _ADC1_channel_AN15_Tasks
-                  0x002166                  _ADC1_channel_AN17_CallBack
-                  0x00216e                  _ADC1_Setchannel_AN17InterruptHandler
-                  0x00217a                  _ADC1_channel_AN17_Tasks
-                  0x002198                  _ADC1_channel_AN19_CallBack
-                  0x0021a0                  _ADC1_Setchannel_AN19InterruptHandler
-                  0x0021ac                  _ADC1_channel_AN20_CallBack
-                  0x0021b4                  _ADC1_Setchannel_AN20InterruptHandler
-                  0x0021c0                  _ADC1_channel_AN0_CallBack
-                  0x0021c8                  _ADC1_Setchannel_AN0InterruptHandler
-                  0x0021d4                  _ADC1_channel_AN0_Tasks
- .text            0x0021f2        0x122 build/default/debug/_ext/1769188794/pwm.o
-                  0x0021f2                  _PWM_Initialize
-                  0x002260                  _PWM_Generator1_CallBack
-                  0x002266                  _PWM_Generator1_Tasks
-                  0x002278                  _PWM_EventA_CallBack
-                  0x00227e                  _PWM_EventA_Tasks
-                  0x002292                  _PWM_EventB_CallBack
-                  0x002298                  _PWM_EventB_Tasks
-                  0x0022ac                  _PWM_EventC_CallBack
-                  0x0022b2                  _PWM_EventC_Tasks
-                  0x0022c6                  _PWM_EventD_CallBack
-                  0x0022cc                  _PWM_EventD_Tasks
-                  0x0022e0                  _PWM_EventE_CallBack
-                  0x0022e6                  _PWM_EventE_Tasks
-                  0x0022fa                  _PWM_EventF_CallBack
-                  0x002300                  _PWM_EventF_Tasks
- .text            0x002314        0x114 build/default/debug/_ext/1769188794/reset.o
-                  0x002314                  _RESET_GetCause
-                  0x00231c                  _RESET_CauseHandler
-                  0x002420                  _RESET_CauseClearAll
- .text            0x002428         0x6c build/default/debug/_ext/1769188794/clock.o
-                  0x002428                  _CLOCK_Initialize
-                  0x00247c                  _CLOCK_AuxPllLockStatusGet
+ .text            0x001f90        0x264 build/default/debug/_ext/1769188794/adc1.o
+                  0x001f90                  _ADC1_Initialize
+                  0x00205c                  _ADC1_Core0PowerEnable
+                  0x002072                  _ADC1_Core1PowerEnable
+                  0x002088                  _ADC1_SharedCorePowerEnable
+                  0x00209e                  _ADC1_CallBack
+                  0x0020a4                  _ADC1_SetCommonInterruptHandler
+                  0x0020b0                  _ADC1_Tasks
+                  0x0020cc                  _ADC1_channel_AN7_CallBack
+                  0x0020d4                  _ADC1_Setchannel_AN7InterruptHandler
+                  0x0020e0                  _ADC1_channel_AN7_Tasks
+                  0x002100                  _ADC1_channel_AN12_CallBack
+                  0x002108                  _ADC1_Setchannel_AN12InterruptHandler
+                  0x002114                  _ADC1_channel_AN12_Tasks
+                  0x002134                  _ADC1_channel_AN15_CallBack
+                  0x00213c                  _ADC1_Setchannel_AN15InterruptHandler
+                  0x002148                  _ADC1_channel_AN15_Tasks
+                  0x002168                  _ADC1_channel_AN17_CallBack
+                  0x002170                  _ADC1_Setchannel_AN17InterruptHandler
+                  0x00217c                  _ADC1_channel_AN17_Tasks
+                  0x00219a                  _ADC1_channel_AN19_CallBack
+                  0x0021a2                  _ADC1_Setchannel_AN19InterruptHandler
+                  0x0021ae                  _ADC1_channel_AN20_CallBack
+                  0x0021b6                  _ADC1_Setchannel_AN20InterruptHandler
+                  0x0021c2                  _ADC1_channel_AN0_CallBack
+                  0x0021ca                  _ADC1_Setchannel_AN0InterruptHandler
+                  0x0021d6                  _ADC1_channel_AN0_Tasks
+ .text            0x0021f4        0x122 build/default/debug/_ext/1769188794/pwm.o
+                  0x0021f4                  _PWM_Initialize
+                  0x002262                  _PWM_Generator1_CallBack
+                  0x002268                  _PWM_Generator1_Tasks
+                  0x00227a                  _PWM_EventA_CallBack
+                  0x002280                  _PWM_EventA_Tasks
+                  0x002294                  _PWM_EventB_CallBack
+                  0x00229a                  _PWM_EventB_Tasks
+                  0x0022ae                  _PWM_EventC_CallBack
+                  0x0022b4                  _PWM_EventC_Tasks
+                  0x0022c8                  _PWM_EventD_CallBack
+                  0x0022ce                  _PWM_EventD_Tasks
+                  0x0022e2                  _PWM_EventE_CallBack
+                  0x0022e8                  _PWM_EventE_Tasks
+                  0x0022fc                  _PWM_EventF_CallBack
+                  0x002302                  _PWM_EventF_Tasks
+ .text            0x002316        0x114 build/default/debug/_ext/1769188794/reset.o
+                  0x002316                  _RESET_GetCause
+                  0x00231e                  _RESET_CauseHandler
+                  0x002422                  _RESET_CauseClearAll
+ .text            0x00242a         0x6c build/default/debug/_ext/1769188794/clock.o
+                  0x00242a                  _CLOCK_Initialize
+                  0x00247e                  _CLOCK_AuxPllLockStatusGet
 
-.dinit            0x002494         0x60
- .dinit           0x002494         0x60 data_init
+.dinit            0x002496         0x60
+ .dinit           0x002496         0x60 data_init
 
-.text             0x0024f4         0x7c
- .text            0x0024f4         0x46 build/default/debug/_ext/1769188794/pin_manager.o
-                  0x0024f4                  _PIN_MANAGER_Initialize
- .text            0x00253a         0x36 build/default/debug/_ext/1769188794/system.o
-                  0x002558                  _SYSTEM_Initialize
+.text             0x0024f6         0x7c
+ .text            0x0024f6         0x46 build/default/debug/_ext/1769188794/pin_manager.o
+                  0x0024f6                  _PIN_MANAGER_Initialize
+ .text            0x00253c         0x36 build/default/debug/_ext/1769188794/system.o
+                  0x00255a                  _SYSTEM_Initialize
 
-.init.delay32     0x002570         0x1c
- .init.delay32    0x002570         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
-                  0x002570                  ___delay32
+.init.delay32     0x002572         0x1c
+ .init.delay32    0x002572         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32ch.Meo)
+                  0x002572                  ___delay32
 
-.text             0x00258c         0x4a
- .text            0x00258c         0x1a build/default/debug/_ext/1769188794/interrupt_manager.o
-                  0x00258c                  _INTERRUPT_Initialize
- .text            0x0025a6         0x1a build/default/debug/_ext/1769188794/traps.o
-                  0x0025a6                  _TRAPS_halt_on_error
- .text            0x0025c0         0x16 build/default/debug/_ext/1769188794/opa.o
-                  0x0025c8                  _OPA_Initialize
+.text             0x00258e         0x4a
+ .text            0x00258e         0x1a build/default/debug/_ext/1769188794/interrupt_manager.o
+                  0x00258e                  _INTERRUPT_Initialize
+ .text            0x0025a8         0x1a build/default/debug/_ext/1769188794/traps.o
+                  0x0025a8                  _TRAPS_halt_on_error
+ .text            0x0025c2         0x16 build/default/debug/_ext/1769188794/opa.o
+                  0x0025ca                  _OPA_Initialize
