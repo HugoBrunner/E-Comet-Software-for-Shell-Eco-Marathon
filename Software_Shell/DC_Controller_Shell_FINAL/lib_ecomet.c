@@ -79,7 +79,7 @@ int consigneCourant(){                                                          
             
     int conversion = 0;
     int i=0;
-    float range = 20; // en Ampères
+    float range = 22; // en Ampères
     float courant_gachette = 0;
     
     ADC1_Initialize();
@@ -94,12 +94,13 @@ int consigneCourant(){                                                          
     
     ADC1_SoftwareTriggerDisable();
     //while(!ADC1_IsConversionComplete(channel));
+
     conversion = ADC1_ConversionResultGet(channel) - 1050; // Corrige le décallage 
                                                            // de tension du potentiomètre
     ADC1_Disable(); 
     
     courant_gachette = abs(round((float)(conversion/4095.0)*range)); // vérifier conversion
-    
+        
     return courant_gachette;
 }
 

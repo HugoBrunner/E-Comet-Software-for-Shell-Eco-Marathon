@@ -245,14 +245,14 @@ int main(void) {
                 
                 if (consigne >=1 && consigne <3)
                     u=30;
-                if (consigne >=3 && consigne <5)
-                    u=50;
+                else if (consigne >=3 && consigne <5)
+                    u=55;
                 else if (consigne >=5 && consigne <7)
-                    u=85;
+                    u=90;
                 else if (consigne >=7 && consigne <9 )
-                  u=115;
+                  u=120;
                 else if (consigne >=9 )
-                  u=130;
+                  u=150;
                 else
                     u=0;
                 
