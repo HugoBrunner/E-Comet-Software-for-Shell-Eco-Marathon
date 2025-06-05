@@ -14,16 +14,24 @@ We are designing a electric prototype to eventually participate to the Shell Eco
 
 ## Software
 
-### The goal of the code
-The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write them on micro SD card. Finally, it will show selected data on a OLED screen.
+### The goal of the DC motor driver's code
+The code is there to control the DC motor thanks to a potentiometer. It will also collect all the data from the sensors and write them on micro SD card. Finally, it will used the data to stop the driver if there are problems like to much current or to much heat at the MOSFET surface.
+
+### The goal of the Arduino's code
+The code is there to show the speed informations to the driver. In fact, it will record the actual speed of the prototype and will calculate the mean speed. Theses two speeds are displayed on the screen.
 
 ### Python Script
 The Python script is used to process the data from the board to calculate the energy consumption, mean velocity or the battery voltage change. The script will give a LaTeX report with data and plots.
+
 ### Useful links
 - [Legacy PIC24 MCU & dsPIC DSC Peripheral Library](https://www.microchip.com/SWLibraryWeb/product.aspx?product=PIC24%20MCU%20dsPIC%20Peripheral%20Lib#)
 - [MPLAB® Code Configurator](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator)
 - [dspic33ck-power-pwm-complementary](https://github.com/microchip-pic-avr-examples/dspic33ck-power-pwm-complementary)
+<<<<<<< HEAD
 - [dsPIC33C PWM/ADC Configuration](https://github.com/microchip-pic-avr-examples/dspic33ck-power-pwm-adc-trigger)
+=======
+- [MCC Card tutorial](https://microchip.my.site.com/s/article/dsPIC33Cx--How-to-create-an-SD-card-Example-using-MCC-Classic)
+>>>>>>> faa0e7c0288f48eb5a707ff70d93f1ea6108e7f4
 
 ## Controller PCB design
 Git repository for the [PCB design](https://cadlab.io/project/27305/master/files)
